@@ -4,6 +4,7 @@ import com.baizhi.springb1.conf.CreateValidateCode;
 import com.baizhi.springb1.entity.Admin;
 import com.baizhi.springb1.excp.AdminException;
 import com.baizhi.springb1.service.AdminService;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -14,6 +15,7 @@ import javax.servlet.http.HttpSession;
 import java.io.IOException;
 
 @Controller
+@Slf4j
 @RequestMapping("admin")
 public class AdminController {
 
@@ -28,7 +30,7 @@ public class AdminController {
             throw new AdminException("验证码错误");
         }
         Admin one = adminService.findOne(name, password);
-        System.out.println(one + "------------");
+        log.info(one+"-------------");
         return one;
     }
 
@@ -41,7 +43,7 @@ public class AdminController {
         session.setAttribute("code", code);
         //在输出图片
         cvc.write(response.getOutputStream());
-        System.out.println("hehe");
+
     }
 
 

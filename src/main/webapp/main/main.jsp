@@ -4,13 +4,90 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <title>持名法州主页</title>
-    <link rel="stylesheet" type="text/css" href="../themes/default/easyui.css">
-    <link rel="stylesheet" type="text/css" href="../themes/IconExtension.css">
-    <script type="text/javascript" src="../js/jquery.min.js"></script>
-    <script type="text/javascript" src="../js/jquery.easyui.min.js"></script>
-    <script type="text/javascript" src="../js/easyui-lang-zh_CN.js"></script>
+    <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/themes/default/easyui.css">
+    <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/themes/IconExtension.css">
+    <script type="text/javascript" src="${pageContext.request.contextPath}/js/jquery.min.js"></script>
+    <script type="text/javascript" src="${pageContext.request.contextPath}/js/jquery.easyui.min.js"></script>
+    <script type="text/javascript" src="${pageContext.request.contextPath}/js/easyui-lang-zh_CN.js"></script>
     <script type="text/javascript">
-        <!--菜单处理-->
+        $(function () {
+           $.get("${pageContext.request.contextPath}/menu/showAllFu",function (result) {
+                console.log(result);
+                for(var i = 0; i < result.length; i++){
+
+                    if(i == 0) { //显示第一个一级菜单下的二级菜单
+                        $('#aa').accordion('add', {
+                            title: result[i].title,
+                            content: '<div style="padding:10px 0px"><ul id="tree' + result[i].id + '"></ul></div>',
+                            selected: false
+                        });
+                    } else {
+                        $('#aa').accordion('add', {
+                            title: result[i].title,
+                            content: '<div style="padding:10px 0px"><ul id="tree' + result[i].id + '"></ul></div>',
+                            selected: false
+                        });
+                    }
+
+
+
+                    $.ajax({
+                        type: 'POST',
+                        async: false,
+                        dataType: "json",
+                        url: '${pageContext.request.contextPath}/menu/showAllZi/'+result[i].id,
+                        success: function(data) {
+
+                            $("#tree" + result[i].id).tree({
+                                data: data,
+                                animate: true,
+                                //iconCls: "icon-blank",
+                                //在树节点加图片
+                                formatter:function(node){
+                                    return "<img src='${pageContext.request.contextPath}/"+node.iconcls+"'/>"+node.title;
+                                },
+                                //lines: true, //显示虚线效果
+                                onClick: function(node) { // 在用户点击一个子节点即二级菜单时触发addTab()方法,用于添加tabs
+                                    //if(node.url){//判断url是否存在，存在则创建tabs
+                                    if(node) {
+                                        addTab(node);
+                                    }
+                                }
+
+                            });
+                            $(".tree-icon,.tree-file").removeClass("tree-icon tree-file");
+                            $(".tree-icon,.tree-folder").removeClass("tree-icon tree-folder tree-folder-open tree-folder-closed");
+                        }
+
+                    });
+
+
+                }
+           });
+
+        });
+
+        function addTab(node) {
+            //var t=$.trim(t);
+            var tabExitOrNot = $('#tt').tabs('exists', node.title);//判断此选项卡是否已存在
+            if(tabExitOrNot == true) {
+                $('#tt').tabs('select', node.title);
+                return;
+            }
+            //添加选项卡
+            $('#tt').tabs('add', {
+                title: node.title,
+                closable: true,
+                href:"${pageContext.request.contextPath}/"+node.url,
+                tools:[{
+                    iconCls:'icon-neighbourhood',
+                    handler:function(){
+                        alert('refresh');
+                    }
+                }]
+
+            });
+        }
     </script>
 
 </head>
@@ -31,6 +108,17 @@
 
 <div data-options="region:'west',title:'导航菜单',split:true" style="width:220px;">
     <div id="aa" class="easyui-accordion" data-options="fit:true">
+        <%--<div title="Title1" data-options="iconCls:'icon-save'" style="overflow:auto;padding:10px;">
+            <h3 style="color:#0099FF;">Accordion for jQuery</h3>
+            <p>Accordion is a part of easyui framework for jQuery.
+                It lets you define your accordion component on web page more easily.</p>
+        </div>
+        <div title="Title2" data-options="iconCls:'icon-reload',selected:true" style="padding:10px;">
+            content2
+        </div>
+        <div title="Title3">
+            content3
+        </div>--%>
 
     </div>
 </div>
