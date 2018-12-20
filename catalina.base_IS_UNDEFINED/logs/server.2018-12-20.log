@@ -1,0 +1,339 @@
+2018-12-20 17:42:29.638 [restartedMain] INFO  com.baizhi.springb1.Springb1Application - Starting Springb1Application on MyPC with PID 5288 (D:\ideaworkspace\springb\springb-1\target\classes started by HENGEN in D:\ideaworkspace\springb\springb-1)
+2018-12-20 17:42:29.650 [restartedMain] INFO  com.baizhi.springb1.Springb1Application - No active profile set, falling back to default profiles: default
+2018-12-20 17:42:29.830 [restartedMain] INFO  o.s.b.c.e.AnnotationConfigEmbeddedWebApplicationContext - Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@b4745a6: startup date [Thu Dec 20 17:42:29 CST 2018]; root of context hierarchy
+2018-12-20 17:42:30.520 [background-preinit] INFO  org.hibernate.validator.internal.util.Version - HV000001: Hibernate Validator 5.3.5.Final
+2018-12-20 17:42:32.734 [restartedMain] WARN  tk.mybatis.spring.mapper.ClassPathMapperScanner - No MyBatis mapper was found in '[com.baizhi.springb1]' package. Please check your configuration.
+2018-12-20 17:42:35.352 [restartedMain] INFO  o.s.b.c.e.tomcat.TomcatEmbeddedServletContainer - Tomcat initialized with port(s): 8089 (http)
+2018-12-20 17:42:35.391 [restartedMain] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2018-12-20 17:42:35.393 [restartedMain] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet Engine: Apache Tomcat/8.5.23
+2018-12-20 17:42:36.401 [localhost-startStop-1] INFO  org.apache.jasper.servlet.TldScanner - At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2018-12-20 17:42:36.424 [localhost-startStop-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/springb-1] - Initializing Spring embedded WebApplicationContext
+2018-12-20 17:42:36.425 [localhost-startStop-1] INFO  org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 6595 ms
+2018-12-20 17:42:36.948 [localhost-startStop-1] INFO  o.s.boot.web.servlet.ServletRegistrationBean - Mapping servlet: 'dispatcherServlet' to [/]
+2018-12-20 17:42:36.959 [localhost-startStop-1] INFO  o.s.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'characterEncodingFilter' to: [/*]
+2018-12-20 17:42:36.960 [localhost-startStop-1] INFO  o.s.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2018-12-20 17:42:36.961 [localhost-startStop-1] INFO  o.s.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2018-12-20 17:42:36.961 [localhost-startStop-1] INFO  o.s.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'requestContextFilter' to: [/*]
+2018-12-20 17:42:40.368 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerAdapter - Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@b4745a6: startup date [Thu Dec 20 17:42:29 CST 2018]; root of context hierarchy
+2018-12-20 17:42:40.617 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/admin/login]}" onto public com.baizhi.springb1.entity.Admin com.baizhi.springb1.controller.AdminController.login(java.lang.String,java.lang.String,java.lang.String,javax.servlet.http.HttpSession)
+2018-12-20 17:42:40.619 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/admin/image]}" onto public void com.baizhi.springb1.controller.AdminController.image(javax.servlet.http.HttpServletResponse,javax.servlet.http.HttpSession) throws java.io.IOException
+2018-12-20 17:42:40.621 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/banner/add],methods=[POST]}" onto public void com.baizhi.springb1.controller.BannerController.add(com.baizhi.springb1.entity.Banner,org.springframework.web.multipart.MultipartFile,javax.servlet.http.HttpServletRequest) throws java.io.IOException
+2018-12-20 17:42:40.622 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/banner/update]}" onto public void com.baizhi.springb1.controller.BannerController.update(java.lang.Integer,java.lang.Integer)
+2018-12-20 17:42:40.623 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/banner/showAll]}" onto public com.baizhi.springb1.entity.DtoBanner com.baizhi.springb1.controller.BannerController.showAll(int,int)
+2018-12-20 17:42:40.627 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/menu/showAllFu]}" onto public java.util.List<com.baizhi.springb1.entity.Menu> com.baizhi.springb1.controller.MenuController.showAllFu()
+2018-12-20 17:42:40.628 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/menu/showAllZi/{id}]}" onto public java.util.List<com.baizhi.springb1.entity.Menu> com.baizhi.springb1.controller.MenuController.showAllZi(java.lang.Integer)
+2018-12-20 17:42:40.633 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2018-12-20 17:42:40.634 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2018-12-20 17:42:41.168 [restartedMain] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-12-20 17:42:41.168 [restartedMain] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-12-20 17:42:41.259 [restartedMain] INFO  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Detected @ExceptionHandler methods in globleException
+2018-12-20 17:42:41.338 [restartedMain] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-12-20 17:42:42.121 [restartedMain] INFO  o.s.b.d.autoconfigure.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2018-12-20 17:42:42.144 [restartedMain] INFO  t.mybatis.mapper.autoconfigure.MapperCacheDisabler - Clear tk.mybatis.mapper.util.MsUtil CLASS_CACHE cache.
+2018-12-20 17:42:42.145 [restartedMain] INFO  t.mybatis.mapper.autoconfigure.MapperCacheDisabler - Clear tk.mybatis.mapper.genid.GenIdUtil CACHE cache.
+2018-12-20 17:42:42.147 [restartedMain] INFO  t.mybatis.mapper.autoconfigure.MapperCacheDisabler - Clear tk.mybatis.mapper.version.VersionUtil CACHE cache.
+2018-12-20 17:42:42.147 [restartedMain] INFO  t.mybatis.mapper.autoconfigure.MapperCacheDisabler - Clear EntityHelper entityTableMap cache.
+2018-12-20 17:42:42.267 [restartedMain] INFO  o.s.jmx.export.annotation.AnnotationMBeanExporter - Registering beans for JMX exposure on startup
+2018-12-20 17:42:42.270 [restartedMain] INFO  o.s.jmx.export.annotation.AnnotationMBeanExporter - Bean with name 'dataSource' has been autodetected for JMX exposure
+2018-12-20 17:42:42.277 [restartedMain] INFO  o.s.jmx.export.annotation.AnnotationMBeanExporter - Located MBean 'dataSource': registering with JMX server as MBean [com.alibaba.druid.pool:name=dataSource,type=DruidDataSource]
+2018-12-20 17:42:42.349 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8089"]
+2018-12-20 17:42:42.419 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8089"]
+2018-12-20 17:42:42.458 [restartedMain] INFO  org.apache.tomcat.util.net.NioSelectorPool - Using a shared selector for servlet write/read
+2018-12-20 17:42:42.543 [restartedMain] INFO  o.s.b.c.e.tomcat.TomcatEmbeddedServletContainer - Tomcat started on port(s): 8089 (http)
+2018-12-20 17:42:42.568 [restartedMain] INFO  com.baizhi.springb1.Springb1Application - Started Springb1Application in 13.578 seconds (JVM running for 15.002)
+2018-12-20 17:43:18.552 [http-nio-8089-exec-2] INFO  o.a.c.c.C.[Tomcat].[localhost].[/springb-1] - Initializing Spring FrameworkServlet 'dispatcherServlet'
+2018-12-20 17:43:18.553 [http-nio-8089-exec-2] INFO  org.springframework.web.servlet.DispatcherServlet - FrameworkServlet 'dispatcherServlet': initialization started
+2018-12-20 17:43:18.616 [http-nio-8089-exec-2] INFO  org.springframework.web.servlet.DispatcherServlet - FrameworkServlet 'dispatcherServlet': initialization completed in 62 ms
+2018-12-20 17:43:18.901 [http-nio-8089-exec-2] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+2018-12-20 17:50:03.500 [restartedMain] INFO  com.baizhi.springb1.Springb1Application - Starting Springb1Application on MyPC with PID 13412 (D:\ideaworkspace\springb\springb-1\target\classes started by HENGEN in D:\ideaworkspace\springb\springb-1)
+2018-12-20 17:50:03.505 [restartedMain] INFO  com.baizhi.springb1.Springb1Application - No active profile set, falling back to default profiles: default
+2018-12-20 17:50:03.700 [restartedMain] INFO  o.s.b.c.e.AnnotationConfigEmbeddedWebApplicationContext - Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@b4745a6: startup date [Thu Dec 20 17:50:03 CST 2018]; root of context hierarchy
+2018-12-20 17:50:04.376 [background-preinit] INFO  org.hibernate.validator.internal.util.Version - HV000001: Hibernate Validator 5.3.5.Final
+2018-12-20 17:50:06.242 [restartedMain] WARN  tk.mybatis.spring.mapper.ClassPathMapperScanner - No MyBatis mapper was found in '[com.baizhi.springb1]' package. Please check your configuration.
+2018-12-20 17:50:08.590 [restartedMain] INFO  o.s.b.c.e.tomcat.TomcatEmbeddedServletContainer - Tomcat initialized with port(s): 8089 (http)
+2018-12-20 17:50:08.626 [restartedMain] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2018-12-20 17:50:08.630 [restartedMain] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet Engine: Apache Tomcat/8.5.23
+2018-12-20 17:50:09.228 [localhost-startStop-1] INFO  org.apache.jasper.servlet.TldScanner - At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2018-12-20 17:50:09.240 [localhost-startStop-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/springb-1] - Initializing Spring embedded WebApplicationContext
+2018-12-20 17:50:09.241 [localhost-startStop-1] INFO  org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 5541 ms
+2018-12-20 17:50:09.620 [localhost-startStop-1] INFO  o.s.boot.web.servlet.ServletRegistrationBean - Mapping servlet: 'dispatcherServlet' to [/]
+2018-12-20 17:50:09.631 [localhost-startStop-1] INFO  o.s.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'characterEncodingFilter' to: [/*]
+2018-12-20 17:50:09.631 [localhost-startStop-1] INFO  o.s.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2018-12-20 17:50:09.632 [localhost-startStop-1] INFO  o.s.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2018-12-20 17:50:09.632 [localhost-startStop-1] INFO  o.s.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'requestContextFilter' to: [/*]
+2018-12-20 17:50:11.599 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerAdapter - Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@b4745a6: startup date [Thu Dec 20 17:50:03 CST 2018]; root of context hierarchy
+2018-12-20 17:50:11.778 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/admin/login]}" onto public com.baizhi.springb1.entity.Admin com.baizhi.springb1.controller.AdminController.login(java.lang.String,java.lang.String,java.lang.String,javax.servlet.http.HttpSession)
+2018-12-20 17:50:11.788 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/admin/image]}" onto public void com.baizhi.springb1.controller.AdminController.image(javax.servlet.http.HttpServletResponse,javax.servlet.http.HttpSession) throws java.io.IOException
+2018-12-20 17:50:11.798 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/banner/add],methods=[POST]}" onto public void com.baizhi.springb1.controller.BannerController.add(com.baizhi.springb1.entity.Banner,org.springframework.web.multipart.MultipartFile,javax.servlet.http.HttpServletRequest) throws java.io.IOException
+2018-12-20 17:50:11.799 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/banner/update]}" onto public void com.baizhi.springb1.controller.BannerController.update(java.lang.Integer,java.lang.Integer)
+2018-12-20 17:50:11.800 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/banner/showAll]}" onto public com.baizhi.springb1.entity.DtoBanner com.baizhi.springb1.controller.BannerController.showAll(int,int)
+2018-12-20 17:50:11.804 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/menu/showAllFu]}" onto public java.util.List<com.baizhi.springb1.entity.Menu> com.baizhi.springb1.controller.MenuController.showAllFu()
+2018-12-20 17:50:11.805 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/menu/showAllZi/{id}]}" onto public java.util.List<com.baizhi.springb1.entity.Menu> com.baizhi.springb1.controller.MenuController.showAllZi(java.lang.Integer)
+2018-12-20 17:50:11.812 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2018-12-20 17:50:11.813 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2018-12-20 17:50:11.896 [restartedMain] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-12-20 17:50:11.896 [restartedMain] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-12-20 17:50:11.958 [restartedMain] INFO  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Detected @ExceptionHandler methods in globleException
+2018-12-20 17:50:12.016 [restartedMain] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-12-20 17:50:12.836 [restartedMain] INFO  o.s.b.d.autoconfigure.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2018-12-20 17:50:12.856 [restartedMain] INFO  t.mybatis.mapper.autoconfigure.MapperCacheDisabler - Clear tk.mybatis.mapper.util.MsUtil CLASS_CACHE cache.
+2018-12-20 17:50:12.858 [restartedMain] INFO  t.mybatis.mapper.autoconfigure.MapperCacheDisabler - Clear tk.mybatis.mapper.genid.GenIdUtil CACHE cache.
+2018-12-20 17:50:12.862 [restartedMain] INFO  t.mybatis.mapper.autoconfigure.MapperCacheDisabler - Clear tk.mybatis.mapper.version.VersionUtil CACHE cache.
+2018-12-20 17:50:12.870 [restartedMain] INFO  t.mybatis.mapper.autoconfigure.MapperCacheDisabler - Clear EntityHelper entityTableMap cache.
+2018-12-20 17:50:13.059 [restartedMain] INFO  o.s.jmx.export.annotation.AnnotationMBeanExporter - Registering beans for JMX exposure on startup
+2018-12-20 17:50:13.063 [restartedMain] INFO  o.s.jmx.export.annotation.AnnotationMBeanExporter - Bean with name 'dataSource' has been autodetected for JMX exposure
+2018-12-20 17:50:13.076 [restartedMain] INFO  o.s.jmx.export.annotation.AnnotationMBeanExporter - Located MBean 'dataSource': registering with JMX server as MBean [com.alibaba.druid.pool:name=dataSource,type=DruidDataSource]
+2018-12-20 17:50:13.127 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8089"]
+2018-12-20 17:50:13.159 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8089"]
+2018-12-20 17:50:13.185 [restartedMain] INFO  org.apache.tomcat.util.net.NioSelectorPool - Using a shared selector for servlet write/read
+2018-12-20 17:50:13.261 [restartedMain] INFO  o.s.b.c.e.tomcat.TomcatEmbeddedServletContainer - Tomcat started on port(s): 8089 (http)
+2018-12-20 17:50:13.281 [restartedMain] INFO  com.baizhi.springb1.Springb1Application - Started Springb1Application in 10.37 seconds (JVM running for 11.771)
+2018-12-20 17:50:38.087 [http-nio-8089-exec-9] INFO  o.a.c.c.C.[Tomcat].[localhost].[/springb-1] - Initializing Spring FrameworkServlet 'dispatcherServlet'
+2018-12-20 17:50:38.088 [http-nio-8089-exec-9] INFO  org.springframework.web.servlet.DispatcherServlet - FrameworkServlet 'dispatcherServlet': initialization started
+2018-12-20 17:50:38.178 [http-nio-8089-exec-9] INFO  org.springframework.web.servlet.DispatcherServlet - FrameworkServlet 'dispatcherServlet': initialization completed in 89 ms
+2018-12-20 17:50:38.560 [http-nio-8089-exec-9] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+2018-12-20 17:58:18.028 [restartedMain] INFO  com.baizhi.springb1.Springb1Application - Starting Springb1Application on MyPC with PID 15044 (D:\ideaworkspace\springb\springb-1\target\classes started by HENGEN in D:\ideaworkspace\springb\springb-1)
+2018-12-20 17:58:18.033 [restartedMain] INFO  com.baizhi.springb1.Springb1Application - No active profile set, falling back to default profiles: default
+2018-12-20 17:58:18.243 [restartedMain] INFO  o.s.b.c.e.AnnotationConfigEmbeddedWebApplicationContext - Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@33bb139: startup date [Thu Dec 20 17:58:18 CST 2018]; root of context hierarchy
+2018-12-20 17:58:18.941 [background-preinit] INFO  org.hibernate.validator.internal.util.Version - HV000001: Hibernate Validator 5.3.5.Final
+2018-12-20 17:58:20.717 [restartedMain] WARN  tk.mybatis.spring.mapper.ClassPathMapperScanner - No MyBatis mapper was found in '[com.baizhi.springb1]' package. Please check your configuration.
+2018-12-20 17:58:23.077 [restartedMain] INFO  o.s.b.c.e.tomcat.TomcatEmbeddedServletContainer - Tomcat initialized with port(s): 8089 (http)
+2018-12-20 17:58:23.120 [restartedMain] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2018-12-20 17:58:23.122 [restartedMain] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet Engine: Apache Tomcat/8.5.23
+2018-12-20 17:58:23.654 [localhost-startStop-1] INFO  org.apache.jasper.servlet.TldScanner - At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2018-12-20 17:58:23.677 [localhost-startStop-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/springb-1] - Initializing Spring embedded WebApplicationContext
+2018-12-20 17:58:23.677 [localhost-startStop-1] INFO  org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 5434 ms
+2018-12-20 17:58:24.052 [localhost-startStop-1] INFO  o.s.boot.web.servlet.ServletRegistrationBean - Mapping servlet: 'dispatcherServlet' to [/]
+2018-12-20 17:58:24.059 [localhost-startStop-1] INFO  o.s.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'characterEncodingFilter' to: [/*]
+2018-12-20 17:58:24.059 [localhost-startStop-1] INFO  o.s.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2018-12-20 17:58:24.059 [localhost-startStop-1] INFO  o.s.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2018-12-20 17:58:24.060 [localhost-startStop-1] INFO  o.s.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'requestContextFilter' to: [/*]
+2018-12-20 17:58:26.106 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerAdapter - Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@33bb139: startup date [Thu Dec 20 17:58:18 CST 2018]; root of context hierarchy
+2018-12-20 17:58:26.353 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/admin/login]}" onto public com.baizhi.springb1.entity.Admin com.baizhi.springb1.controller.AdminController.login(java.lang.String,java.lang.String,java.lang.String,javax.servlet.http.HttpSession)
+2018-12-20 17:58:26.356 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/admin/image]}" onto public void com.baizhi.springb1.controller.AdminController.image(javax.servlet.http.HttpServletResponse,javax.servlet.http.HttpSession) throws java.io.IOException
+2018-12-20 17:58:26.368 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/banner/add],methods=[POST]}" onto public void com.baizhi.springb1.controller.BannerController.add(com.baizhi.springb1.entity.Banner,org.springframework.web.multipart.MultipartFile,javax.servlet.http.HttpServletRequest) throws java.io.IOException
+2018-12-20 17:58:26.374 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/banner/update]}" onto public void com.baizhi.springb1.controller.BannerController.update(java.lang.Integer,java.lang.Integer)
+2018-12-20 17:58:26.388 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/banner/delete]}" onto public void com.baizhi.springb1.controller.BannerController.delete(java.lang.Integer)
+2018-12-20 17:58:26.389 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/banner/showAll]}" onto public com.baizhi.springb1.entity.DtoBanner com.baizhi.springb1.controller.BannerController.showAll(int,int)
+2018-12-20 17:58:26.400 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/menu/showAllZi/{id}]}" onto public java.util.List<com.baizhi.springb1.entity.Menu> com.baizhi.springb1.controller.MenuController.showAllZi(java.lang.Integer)
+2018-12-20 17:58:26.402 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/menu/showAllFu]}" onto public java.util.List<com.baizhi.springb1.entity.Menu> com.baizhi.springb1.controller.MenuController.showAllFu()
+2018-12-20 17:58:26.409 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2018-12-20 17:58:26.411 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2018-12-20 17:58:26.520 [restartedMain] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-12-20 17:58:26.523 [restartedMain] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-12-20 17:58:26.638 [restartedMain] INFO  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Detected @ExceptionHandler methods in globleException
+2018-12-20 17:58:26.746 [restartedMain] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-12-20 17:58:27.659 [restartedMain] INFO  o.s.b.d.autoconfigure.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2018-12-20 17:58:27.676 [restartedMain] INFO  t.mybatis.mapper.autoconfigure.MapperCacheDisabler - Clear tk.mybatis.mapper.util.MsUtil CLASS_CACHE cache.
+2018-12-20 17:58:27.680 [restartedMain] INFO  t.mybatis.mapper.autoconfigure.MapperCacheDisabler - Clear tk.mybatis.mapper.genid.GenIdUtil CACHE cache.
+2018-12-20 17:58:27.681 [restartedMain] INFO  t.mybatis.mapper.autoconfigure.MapperCacheDisabler - Clear tk.mybatis.mapper.version.VersionUtil CACHE cache.
+2018-12-20 17:58:27.684 [restartedMain] INFO  t.mybatis.mapper.autoconfigure.MapperCacheDisabler - Clear EntityHelper entityTableMap cache.
+2018-12-20 17:58:27.814 [restartedMain] INFO  o.s.jmx.export.annotation.AnnotationMBeanExporter - Registering beans for JMX exposure on startup
+2018-12-20 17:58:27.817 [restartedMain] INFO  o.s.jmx.export.annotation.AnnotationMBeanExporter - Bean with name 'dataSource' has been autodetected for JMX exposure
+2018-12-20 17:58:27.825 [restartedMain] INFO  o.s.jmx.export.annotation.AnnotationMBeanExporter - Located MBean 'dataSource': registering with JMX server as MBean [com.alibaba.druid.pool:name=dataSource,type=DruidDataSource]
+2018-12-20 17:58:27.856 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8089"]
+2018-12-20 17:58:27.900 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8089"]
+2018-12-20 17:58:27.942 [restartedMain] INFO  org.apache.tomcat.util.net.NioSelectorPool - Using a shared selector for servlet write/read
+2018-12-20 17:58:28.032 [restartedMain] INFO  o.s.b.c.e.tomcat.TomcatEmbeddedServletContainer - Tomcat started on port(s): 8089 (http)
+2018-12-20 17:58:28.043 [restartedMain] INFO  com.baizhi.springb1.Springb1Application - Started Springb1Application in 10.608 seconds (JVM running for 11.954)
+2018-12-20 17:58:36.380 [http-nio-8089-exec-9] INFO  o.a.c.c.C.[Tomcat].[localhost].[/springb-1] - Initializing Spring FrameworkServlet 'dispatcherServlet'
+2018-12-20 17:58:36.383 [http-nio-8089-exec-9] INFO  org.springframework.web.servlet.DispatcherServlet - FrameworkServlet 'dispatcherServlet': initialization started
+2018-12-20 17:58:36.497 [http-nio-8089-exec-9] INFO  org.springframework.web.servlet.DispatcherServlet - FrameworkServlet 'dispatcherServlet': initialization completed in 113 ms
+2018-12-20 17:58:36.960 [http-nio-8089-exec-9] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+2018-12-20 17:58:47.344 [http-nio-8089-exec-4] INFO  com.baizhi.springb1.controller.BannerController - 2&&&&&&&&&&&&
+2018-12-20 17:58:51.969 [http-nio-8089-exec-3] INFO  com.baizhi.springb1.controller.BannerController - 2&&&&&&&&&&&&
+2018-12-20 18:02:53.477 [restartedMain] INFO  com.baizhi.springb1.Springb1Application - Starting Springb1Application on MyPC with PID 11520 (D:\ideaworkspace\springb\springb-1\target\classes started by HENGEN in D:\ideaworkspace\springb\springb-1)
+2018-12-20 18:02:53.483 [restartedMain] INFO  com.baizhi.springb1.Springb1Application - No active profile set, falling back to default profiles: default
+2018-12-20 18:02:53.674 [restartedMain] INFO  o.s.b.c.e.AnnotationConfigEmbeddedWebApplicationContext - Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@33bb139: startup date [Thu Dec 20 18:02:53 CST 2018]; root of context hierarchy
+2018-12-20 18:02:54.341 [background-preinit] INFO  org.hibernate.validator.internal.util.Version - HV000001: Hibernate Validator 5.3.5.Final
+2018-12-20 18:02:56.453 [restartedMain] WARN  tk.mybatis.spring.mapper.ClassPathMapperScanner - No MyBatis mapper was found in '[com.baizhi.springb1]' package. Please check your configuration.
+2018-12-20 18:02:59.164 [restartedMain] INFO  o.s.b.c.e.tomcat.TomcatEmbeddedServletContainer - Tomcat initialized with port(s): 8089 (http)
+2018-12-20 18:02:59.202 [restartedMain] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2018-12-20 18:02:59.207 [restartedMain] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet Engine: Apache Tomcat/8.5.23
+2018-12-20 18:02:59.813 [localhost-startStop-1] INFO  org.apache.jasper.servlet.TldScanner - At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2018-12-20 18:02:59.828 [localhost-startStop-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/springb-1] - Initializing Spring embedded WebApplicationContext
+2018-12-20 18:02:59.829 [localhost-startStop-1] INFO  org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 6155 ms
+2018-12-20 18:03:00.224 [localhost-startStop-1] INFO  o.s.boot.web.servlet.ServletRegistrationBean - Mapping servlet: 'dispatcherServlet' to [/]
+2018-12-20 18:03:00.234 [localhost-startStop-1] INFO  o.s.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'characterEncodingFilter' to: [/*]
+2018-12-20 18:03:00.237 [localhost-startStop-1] INFO  o.s.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2018-12-20 18:03:00.237 [localhost-startStop-1] INFO  o.s.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2018-12-20 18:03:00.237 [localhost-startStop-1] INFO  o.s.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'requestContextFilter' to: [/*]
+2018-12-20 18:03:02.187 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerAdapter - Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@33bb139: startup date [Thu Dec 20 18:02:53 CST 2018]; root of context hierarchy
+2018-12-20 18:03:02.369 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/admin/login]}" onto public com.baizhi.springb1.entity.Admin com.baizhi.springb1.controller.AdminController.login(java.lang.String,java.lang.String,java.lang.String,javax.servlet.http.HttpSession)
+2018-12-20 18:03:02.372 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/admin/image]}" onto public void com.baizhi.springb1.controller.AdminController.image(javax.servlet.http.HttpServletResponse,javax.servlet.http.HttpSession) throws java.io.IOException
+2018-12-20 18:03:02.377 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/banner/add],methods=[POST]}" onto public void com.baizhi.springb1.controller.BannerController.add(com.baizhi.springb1.entity.Banner,org.springframework.web.multipart.MultipartFile,javax.servlet.http.HttpServletRequest) throws java.io.IOException
+2018-12-20 18:03:02.378 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/banner/update]}" onto public void com.baizhi.springb1.controller.BannerController.update(java.lang.Integer,java.lang.Integer)
+2018-12-20 18:03:02.379 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/banner/delete]}" onto public void com.baizhi.springb1.controller.BannerController.delete(java.lang.Integer)
+2018-12-20 18:03:02.380 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/banner/showAll]}" onto public com.baizhi.springb1.entity.DtoBanner com.baizhi.springb1.controller.BannerController.showAll(int,int)
+2018-12-20 18:03:02.383 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/menu/showAllZi/{id}]}" onto public java.util.List<com.baizhi.springb1.entity.Menu> com.baizhi.springb1.controller.MenuController.showAllZi(java.lang.Integer)
+2018-12-20 18:03:02.386 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/menu/showAllFu]}" onto public java.util.List<com.baizhi.springb1.entity.Menu> com.baizhi.springb1.controller.MenuController.showAllFu()
+2018-12-20 18:03:02.402 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2018-12-20 18:03:02.403 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2018-12-20 18:03:02.516 [restartedMain] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-12-20 18:03:02.516 [restartedMain] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-12-20 18:03:02.557 [restartedMain] INFO  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Detected @ExceptionHandler methods in globleException
+2018-12-20 18:03:02.661 [restartedMain] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-12-20 18:03:03.457 [restartedMain] INFO  o.s.b.d.autoconfigure.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2018-12-20 18:03:03.477 [restartedMain] INFO  t.mybatis.mapper.autoconfigure.MapperCacheDisabler - Clear tk.mybatis.mapper.util.MsUtil CLASS_CACHE cache.
+2018-12-20 18:03:03.478 [restartedMain] INFO  t.mybatis.mapper.autoconfigure.MapperCacheDisabler - Clear tk.mybatis.mapper.genid.GenIdUtil CACHE cache.
+2018-12-20 18:03:03.479 [restartedMain] INFO  t.mybatis.mapper.autoconfigure.MapperCacheDisabler - Clear tk.mybatis.mapper.version.VersionUtil CACHE cache.
+2018-12-20 18:03:03.479 [restartedMain] INFO  t.mybatis.mapper.autoconfigure.MapperCacheDisabler - Clear EntityHelper entityTableMap cache.
+2018-12-20 18:03:03.600 [restartedMain] INFO  o.s.jmx.export.annotation.AnnotationMBeanExporter - Registering beans for JMX exposure on startup
+2018-12-20 18:03:03.603 [restartedMain] INFO  o.s.jmx.export.annotation.AnnotationMBeanExporter - Bean with name 'dataSource' has been autodetected for JMX exposure
+2018-12-20 18:03:03.618 [restartedMain] INFO  o.s.jmx.export.annotation.AnnotationMBeanExporter - Located MBean 'dataSource': registering with JMX server as MBean [com.alibaba.druid.pool:name=dataSource,type=DruidDataSource]
+2018-12-20 18:03:03.648 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8089"]
+2018-12-20 18:03:03.679 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8089"]
+2018-12-20 18:03:03.705 [restartedMain] INFO  org.apache.tomcat.util.net.NioSelectorPool - Using a shared selector for servlet write/read
+2018-12-20 18:03:03.818 [restartedMain] INFO  o.s.b.c.e.tomcat.TomcatEmbeddedServletContainer - Tomcat started on port(s): 8089 (http)
+2018-12-20 18:03:03.839 [restartedMain] INFO  com.baizhi.springb1.Springb1Application - Started Springb1Application in 10.948 seconds (JVM running for 12.3)
+2018-12-20 18:03:15.208 [http-nio-8089-exec-9] INFO  o.a.c.c.C.[Tomcat].[localhost].[/springb-1] - Initializing Spring FrameworkServlet 'dispatcherServlet'
+2018-12-20 18:03:15.209 [http-nio-8089-exec-9] INFO  org.springframework.web.servlet.DispatcherServlet - FrameworkServlet 'dispatcherServlet': initialization started
+2018-12-20 18:03:15.297 [http-nio-8089-exec-9] INFO  org.springframework.web.servlet.DispatcherServlet - FrameworkServlet 'dispatcherServlet': initialization completed in 87 ms
+2018-12-20 18:03:15.577 [http-nio-8089-exec-9] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+2018-12-20 18:06:15.131 [restartedMain] INFO  com.baizhi.springb1.Springb1Application - Starting Springb1Application on MyPC with PID 9332 (D:\ideaworkspace\springb\springb-1\target\classes started by HENGEN in D:\ideaworkspace\springb\springb-1)
+2018-12-20 18:06:15.136 [restartedMain] INFO  com.baizhi.springb1.Springb1Application - No active profile set, falling back to default profiles: default
+2018-12-20 18:06:15.305 [restartedMain] INFO  o.s.b.c.e.AnnotationConfigEmbeddedWebApplicationContext - Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@b4745a6: startup date [Thu Dec 20 18:06:15 CST 2018]; root of context hierarchy
+2018-12-20 18:06:15.972 [background-preinit] INFO  org.hibernate.validator.internal.util.Version - HV000001: Hibernate Validator 5.3.5.Final
+2018-12-20 18:06:17.902 [restartedMain] WARN  tk.mybatis.spring.mapper.ClassPathMapperScanner - No MyBatis mapper was found in '[com.baizhi.springb1]' package. Please check your configuration.
+2018-12-20 18:06:20.397 [restartedMain] INFO  o.s.b.c.e.tomcat.TomcatEmbeddedServletContainer - Tomcat initialized with port(s): 8089 (http)
+2018-12-20 18:06:20.442 [restartedMain] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2018-12-20 18:06:20.445 [restartedMain] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet Engine: Apache Tomcat/8.5.23
+2018-12-20 18:06:21.032 [localhost-startStop-1] INFO  org.apache.jasper.servlet.TldScanner - At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2018-12-20 18:06:21.043 [localhost-startStop-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/springb-1] - Initializing Spring embedded WebApplicationContext
+2018-12-20 18:06:21.044 [localhost-startStop-1] INFO  org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 5739 ms
+2018-12-20 18:06:21.441 [localhost-startStop-1] INFO  o.s.boot.web.servlet.ServletRegistrationBean - Mapping servlet: 'dispatcherServlet' to [/]
+2018-12-20 18:06:21.449 [localhost-startStop-1] INFO  o.s.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'characterEncodingFilter' to: [/*]
+2018-12-20 18:06:21.450 [localhost-startStop-1] INFO  o.s.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2018-12-20 18:06:21.451 [localhost-startStop-1] INFO  o.s.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2018-12-20 18:06:21.451 [localhost-startStop-1] INFO  o.s.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'requestContextFilter' to: [/*]
+2018-12-20 18:06:23.429 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerAdapter - Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@b4745a6: startup date [Thu Dec 20 18:06:15 CST 2018]; root of context hierarchy
+2018-12-20 18:06:23.587 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/admin/login]}" onto public com.baizhi.springb1.entity.Admin com.baizhi.springb1.controller.AdminController.login(java.lang.String,java.lang.String,java.lang.String,javax.servlet.http.HttpSession)
+2018-12-20 18:06:23.590 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/admin/image]}" onto public void com.baizhi.springb1.controller.AdminController.image(javax.servlet.http.HttpServletResponse,javax.servlet.http.HttpSession) throws java.io.IOException
+2018-12-20 18:06:23.593 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/banner/add],methods=[POST]}" onto public void com.baizhi.springb1.controller.BannerController.add(com.baizhi.springb1.entity.Banner,org.springframework.web.multipart.MultipartFile,javax.servlet.http.HttpServletRequest) throws java.io.IOException
+2018-12-20 18:06:23.594 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/banner/update]}" onto public void com.baizhi.springb1.controller.BannerController.update(java.lang.Integer,java.lang.Integer)
+2018-12-20 18:06:23.596 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/banner/delete/{id}]}" onto public void com.baizhi.springb1.controller.BannerController.delete(java.lang.Integer)
+2018-12-20 18:06:23.598 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/banner/showAll]}" onto public com.baizhi.springb1.entity.DtoBanner com.baizhi.springb1.controller.BannerController.showAll(int,int)
+2018-12-20 18:06:23.601 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/menu/showAllZi/{id}]}" onto public java.util.List<com.baizhi.springb1.entity.Menu> com.baizhi.springb1.controller.MenuController.showAllZi(java.lang.Integer)
+2018-12-20 18:06:23.602 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/menu/showAllFu]}" onto public java.util.List<com.baizhi.springb1.entity.Menu> com.baizhi.springb1.controller.MenuController.showAllFu()
+2018-12-20 18:06:23.611 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2018-12-20 18:06:23.614 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2018-12-20 18:06:23.705 [restartedMain] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-12-20 18:06:23.705 [restartedMain] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-12-20 18:06:23.757 [restartedMain] INFO  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Detected @ExceptionHandler methods in globleException
+2018-12-20 18:06:23.820 [restartedMain] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-12-20 18:06:24.669 [restartedMain] INFO  o.s.b.d.autoconfigure.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2018-12-20 18:06:24.690 [restartedMain] INFO  t.mybatis.mapper.autoconfigure.MapperCacheDisabler - Clear tk.mybatis.mapper.util.MsUtil CLASS_CACHE cache.
+2018-12-20 18:06:24.701 [restartedMain] INFO  t.mybatis.mapper.autoconfigure.MapperCacheDisabler - Clear tk.mybatis.mapper.genid.GenIdUtil CACHE cache.
+2018-12-20 18:06:24.702 [restartedMain] INFO  t.mybatis.mapper.autoconfigure.MapperCacheDisabler - Clear tk.mybatis.mapper.version.VersionUtil CACHE cache.
+2018-12-20 18:06:24.704 [restartedMain] INFO  t.mybatis.mapper.autoconfigure.MapperCacheDisabler - Clear EntityHelper entityTableMap cache.
+2018-12-20 18:06:24.812 [restartedMain] INFO  o.s.jmx.export.annotation.AnnotationMBeanExporter - Registering beans for JMX exposure on startup
+2018-12-20 18:06:24.816 [restartedMain] INFO  o.s.jmx.export.annotation.AnnotationMBeanExporter - Bean with name 'dataSource' has been autodetected for JMX exposure
+2018-12-20 18:06:24.823 [restartedMain] INFO  o.s.jmx.export.annotation.AnnotationMBeanExporter - Located MBean 'dataSource': registering with JMX server as MBean [com.alibaba.druid.pool:name=dataSource,type=DruidDataSource]
+2018-12-20 18:06:24.863 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8089"]
+2018-12-20 18:06:24.902 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8089"]
+2018-12-20 18:06:24.936 [restartedMain] INFO  org.apache.tomcat.util.net.NioSelectorPool - Using a shared selector for servlet write/read
+2018-12-20 18:06:25.040 [restartedMain] INFO  o.s.b.c.e.tomcat.TomcatEmbeddedServletContainer - Tomcat started on port(s): 8089 (http)
+2018-12-20 18:06:25.061 [restartedMain] INFO  com.baizhi.springb1.Springb1Application - Started Springb1Application in 10.704 seconds (JVM running for 12.102)
+2018-12-20 18:06:34.305 [http-nio-8089-exec-9] INFO  o.a.c.c.C.[Tomcat].[localhost].[/springb-1] - Initializing Spring FrameworkServlet 'dispatcherServlet'
+2018-12-20 18:06:34.306 [http-nio-8089-exec-9] INFO  org.springframework.web.servlet.DispatcherServlet - FrameworkServlet 'dispatcherServlet': initialization started
+2018-12-20 18:06:34.377 [http-nio-8089-exec-9] INFO  org.springframework.web.servlet.DispatcherServlet - FrameworkServlet 'dispatcherServlet': initialization completed in 71 ms
+2018-12-20 18:06:34.756 [http-nio-8089-exec-9] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+2018-12-20 18:10:10.485 [restartedMain] INFO  com.baizhi.springb1.Springb1Application - Starting Springb1Application on MyPC with PID 13340 (D:\ideaworkspace\springb\springb-1\target\classes started by HENGEN in D:\ideaworkspace\springb\springb-1)
+2018-12-20 18:10:10.490 [restartedMain] INFO  com.baizhi.springb1.Springb1Application - No active profile set, falling back to default profiles: default
+2018-12-20 18:10:10.696 [restartedMain] INFO  o.s.b.c.e.AnnotationConfigEmbeddedWebApplicationContext - Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@3f6f86f3: startup date [Thu Dec 20 18:10:10 CST 2018]; root of context hierarchy
+2018-12-20 18:10:11.387 [background-preinit] INFO  org.hibernate.validator.internal.util.Version - HV000001: Hibernate Validator 5.3.5.Final
+2018-12-20 18:10:13.547 [restartedMain] WARN  tk.mybatis.spring.mapper.ClassPathMapperScanner - No MyBatis mapper was found in '[com.baizhi.springb1]' package. Please check your configuration.
+2018-12-20 18:10:16.361 [restartedMain] INFO  o.s.b.c.e.tomcat.TomcatEmbeddedServletContainer - Tomcat initialized with port(s): 8089 (http)
+2018-12-20 18:10:16.397 [restartedMain] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2018-12-20 18:10:16.399 [restartedMain] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet Engine: Apache Tomcat/8.5.23
+2018-12-20 18:10:17.044 [localhost-startStop-1] INFO  org.apache.jasper.servlet.TldScanner - At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2018-12-20 18:10:17.059 [localhost-startStop-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/springb-1] - Initializing Spring embedded WebApplicationContext
+2018-12-20 18:10:17.059 [localhost-startStop-1] INFO  org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 6364 ms
+2018-12-20 18:10:17.438 [localhost-startStop-1] INFO  o.s.boot.web.servlet.ServletRegistrationBean - Mapping servlet: 'dispatcherServlet' to [/]
+2018-12-20 18:10:17.446 [localhost-startStop-1] INFO  o.s.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'characterEncodingFilter' to: [/*]
+2018-12-20 18:10:17.447 [localhost-startStop-1] INFO  o.s.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2018-12-20 18:10:17.447 [localhost-startStop-1] INFO  o.s.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2018-12-20 18:10:17.448 [localhost-startStop-1] INFO  o.s.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'requestContextFilter' to: [/*]
+2018-12-20 18:10:19.465 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerAdapter - Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@3f6f86f3: startup date [Thu Dec 20 18:10:10 CST 2018]; root of context hierarchy
+2018-12-20 18:10:19.637 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/admin/image]}" onto public void com.baizhi.springb1.controller.AdminController.image(javax.servlet.http.HttpServletResponse,javax.servlet.http.HttpSession) throws java.io.IOException
+2018-12-20 18:10:19.640 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/admin/login]}" onto public com.baizhi.springb1.entity.Admin com.baizhi.springb1.controller.AdminController.login(java.lang.String,java.lang.String,java.lang.String,javax.servlet.http.HttpSession)
+2018-12-20 18:10:19.643 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/banner/add],methods=[POST]}" onto public void com.baizhi.springb1.controller.BannerController.add(com.baizhi.springb1.entity.Banner,org.springframework.web.multipart.MultipartFile,javax.servlet.http.HttpServletRequest) throws java.io.IOException
+2018-12-20 18:10:19.644 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/banner/update]}" onto public void com.baizhi.springb1.controller.BannerController.update(java.lang.Integer,java.lang.Integer)
+2018-12-20 18:10:19.645 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/banner/delete]}" onto public void com.baizhi.springb1.controller.BannerController.delete(java.lang.Integer)
+2018-12-20 18:10:19.646 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/banner/showAll]}" onto public com.baizhi.springb1.entity.DtoBanner com.baizhi.springb1.controller.BannerController.showAll(int,int)
+2018-12-20 18:10:19.648 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/menu/showAllFu]}" onto public java.util.List<com.baizhi.springb1.entity.Menu> com.baizhi.springb1.controller.MenuController.showAllFu()
+2018-12-20 18:10:19.649 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/menu/showAllZi/{id}]}" onto public java.util.List<com.baizhi.springb1.entity.Menu> com.baizhi.springb1.controller.MenuController.showAllZi(java.lang.Integer)
+2018-12-20 18:10:19.653 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2018-12-20 18:10:19.654 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2018-12-20 18:10:19.779 [restartedMain] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-12-20 18:10:19.779 [restartedMain] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-12-20 18:10:19.817 [restartedMain] INFO  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Detected @ExceptionHandler methods in globleException
+2018-12-20 18:10:19.873 [restartedMain] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-12-20 18:10:20.776 [restartedMain] INFO  o.s.b.d.autoconfigure.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2018-12-20 18:10:20.797 [restartedMain] INFO  t.mybatis.mapper.autoconfigure.MapperCacheDisabler - Clear tk.mybatis.mapper.util.MsUtil CLASS_CACHE cache.
+2018-12-20 18:10:20.799 [restartedMain] INFO  t.mybatis.mapper.autoconfigure.MapperCacheDisabler - Clear tk.mybatis.mapper.genid.GenIdUtil CACHE cache.
+2018-12-20 18:10:20.800 [restartedMain] INFO  t.mybatis.mapper.autoconfigure.MapperCacheDisabler - Clear tk.mybatis.mapper.version.VersionUtil CACHE cache.
+2018-12-20 18:10:20.801 [restartedMain] INFO  t.mybatis.mapper.autoconfigure.MapperCacheDisabler - Clear EntityHelper entityTableMap cache.
+2018-12-20 18:10:20.920 [restartedMain] INFO  o.s.jmx.export.annotation.AnnotationMBeanExporter - Registering beans for JMX exposure on startup
+2018-12-20 18:10:20.923 [restartedMain] INFO  o.s.jmx.export.annotation.AnnotationMBeanExporter - Bean with name 'dataSource' has been autodetected for JMX exposure
+2018-12-20 18:10:20.931 [restartedMain] INFO  o.s.jmx.export.annotation.AnnotationMBeanExporter - Located MBean 'dataSource': registering with JMX server as MBean [com.alibaba.druid.pool:name=dataSource,type=DruidDataSource]
+2018-12-20 18:10:20.974 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8089"]
+2018-12-20 18:10:21.025 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8089"]
+2018-12-20 18:10:21.068 [restartedMain] INFO  org.apache.tomcat.util.net.NioSelectorPool - Using a shared selector for servlet write/read
+2018-12-20 18:10:21.154 [restartedMain] INFO  o.s.b.c.e.tomcat.TomcatEmbeddedServletContainer - Tomcat started on port(s): 8089 (http)
+2018-12-20 18:10:21.167 [restartedMain] INFO  com.baizhi.springb1.Springb1Application - Started Springb1Application in 11.242 seconds (JVM running for 12.889)
+2018-12-20 18:10:32.744 [http-nio-8089-exec-9] INFO  o.a.c.c.C.[Tomcat].[localhost].[/springb-1] - Initializing Spring FrameworkServlet 'dispatcherServlet'
+2018-12-20 18:10:32.745 [http-nio-8089-exec-9] INFO  org.springframework.web.servlet.DispatcherServlet - FrameworkServlet 'dispatcherServlet': initialization started
+2018-12-20 18:10:32.839 [http-nio-8089-exec-9] INFO  org.springframework.web.servlet.DispatcherServlet - FrameworkServlet 'dispatcherServlet': initialization completed in 94 ms
+2018-12-20 18:10:33.293 [http-nio-8089-exec-9] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+2018-12-20 18:10:42.858 [http-nio-8089-exec-7] INFO  com.baizhi.springb1.controller.BannerController - 3&&&&&&&&&
+2018-12-20 18:14:46.021 [restartedMain] INFO  com.baizhi.springb1.Springb1Application - Starting Springb1Application on MyPC with PID 10228 (D:\ideaworkspace\springb\springb-1\target\classes started by HENGEN in D:\ideaworkspace\springb\springb-1)
+2018-12-20 18:14:46.028 [restartedMain] INFO  com.baizhi.springb1.Springb1Application - No active profile set, falling back to default profiles: default
+2018-12-20 18:14:46.188 [restartedMain] INFO  o.s.b.c.e.AnnotationConfigEmbeddedWebApplicationContext - Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@5756d319: startup date [Thu Dec 20 18:14:46 CST 2018]; root of context hierarchy
+2018-12-20 18:14:46.794 [background-preinit] INFO  org.hibernate.validator.internal.util.Version - HV000001: Hibernate Validator 5.3.5.Final
+2018-12-20 18:14:48.756 [restartedMain] WARN  tk.mybatis.spring.mapper.ClassPathMapperScanner - No MyBatis mapper was found in '[com.baizhi.springb1]' package. Please check your configuration.
+2018-12-20 18:14:51.202 [restartedMain] INFO  o.s.b.c.e.tomcat.TomcatEmbeddedServletContainer - Tomcat initialized with port(s): 8089 (http)
+2018-12-20 18:14:51.245 [restartedMain] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2018-12-20 18:14:51.248 [restartedMain] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet Engine: Apache Tomcat/8.5.23
+2018-12-20 18:14:51.874 [localhost-startStop-1] INFO  org.apache.jasper.servlet.TldScanner - At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2018-12-20 18:14:51.886 [localhost-startStop-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/springb-1] - Initializing Spring embedded WebApplicationContext
+2018-12-20 18:14:51.887 [localhost-startStop-1] INFO  org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 5699 ms
+2018-12-20 18:14:52.277 [localhost-startStop-1] INFO  o.s.boot.web.servlet.ServletRegistrationBean - Mapping servlet: 'dispatcherServlet' to [/]
+2018-12-20 18:14:52.285 [localhost-startStop-1] INFO  o.s.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'characterEncodingFilter' to: [/*]
+2018-12-20 18:14:52.286 [localhost-startStop-1] INFO  o.s.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2018-12-20 18:14:52.286 [localhost-startStop-1] INFO  o.s.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2018-12-20 18:14:52.287 [localhost-startStop-1] INFO  o.s.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'requestContextFilter' to: [/*]
+2018-12-20 18:14:54.105 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerAdapter - Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@5756d319: startup date [Thu Dec 20 18:14:46 CST 2018]; root of context hierarchy
+2018-12-20 18:14:54.288 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/admin/login]}" onto public com.baizhi.springb1.entity.Admin com.baizhi.springb1.controller.AdminController.login(java.lang.String,java.lang.String,java.lang.String,javax.servlet.http.HttpSession)
+2018-12-20 18:14:54.290 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/admin/image]}" onto public void com.baizhi.springb1.controller.AdminController.image(javax.servlet.http.HttpServletResponse,javax.servlet.http.HttpSession) throws java.io.IOException
+2018-12-20 18:14:54.295 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/banner/add],methods=[POST]}" onto public void com.baizhi.springb1.controller.BannerController.add(com.baizhi.springb1.entity.Banner,org.springframework.web.multipart.MultipartFile,javax.servlet.http.HttpServletRequest) throws java.io.IOException
+2018-12-20 18:14:54.296 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/banner/update]}" onto public void com.baizhi.springb1.controller.BannerController.update(java.lang.Integer,java.lang.Integer)
+2018-12-20 18:14:54.299 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/banner/delete]}" onto public void com.baizhi.springb1.controller.BannerController.delete(java.lang.Integer)
+2018-12-20 18:14:54.300 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/banner/showAll]}" onto public com.baizhi.springb1.entity.DtoBanner com.baizhi.springb1.controller.BannerController.showAll(int,int)
+2018-12-20 18:14:54.304 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/menu/showAllFu]}" onto public java.util.List<com.baizhi.springb1.entity.Menu> com.baizhi.springb1.controller.MenuController.showAllFu()
+2018-12-20 18:14:54.305 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/menu/showAllZi/{id}]}" onto public java.util.List<com.baizhi.springb1.entity.Menu> com.baizhi.springb1.controller.MenuController.showAllZi(java.lang.Integer)
+2018-12-20 18:14:54.314 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2018-12-20 18:14:54.316 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2018-12-20 18:14:54.402 [restartedMain] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-12-20 18:14:54.405 [restartedMain] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-12-20 18:14:54.456 [restartedMain] INFO  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Detected @ExceptionHandler methods in globleException
+2018-12-20 18:14:54.530 [restartedMain] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-12-20 18:14:55.345 [restartedMain] INFO  o.s.b.d.autoconfigure.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2018-12-20 18:14:55.370 [restartedMain] INFO  t.mybatis.mapper.autoconfigure.MapperCacheDisabler - Clear tk.mybatis.mapper.util.MsUtil CLASS_CACHE cache.
+2018-12-20 18:14:55.373 [restartedMain] INFO  t.mybatis.mapper.autoconfigure.MapperCacheDisabler - Clear tk.mybatis.mapper.genid.GenIdUtil CACHE cache.
+2018-12-20 18:14:55.374 [restartedMain] INFO  t.mybatis.mapper.autoconfigure.MapperCacheDisabler - Clear tk.mybatis.mapper.version.VersionUtil CACHE cache.
+2018-12-20 18:14:55.375 [restartedMain] INFO  t.mybatis.mapper.autoconfigure.MapperCacheDisabler - Clear EntityHelper entityTableMap cache.
+2018-12-20 18:14:55.538 [restartedMain] INFO  o.s.jmx.export.annotation.AnnotationMBeanExporter - Registering beans for JMX exposure on startup
+2018-12-20 18:14:55.541 [restartedMain] INFO  o.s.jmx.export.annotation.AnnotationMBeanExporter - Bean with name 'dataSource' has been autodetected for JMX exposure
+2018-12-20 18:14:55.548 [restartedMain] INFO  o.s.jmx.export.annotation.AnnotationMBeanExporter - Located MBean 'dataSource': registering with JMX server as MBean [com.alibaba.druid.pool:name=dataSource,type=DruidDataSource]
+2018-12-20 18:14:55.582 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8089"]
+2018-12-20 18:14:55.618 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8089"]
+2018-12-20 18:14:55.641 [restartedMain] INFO  org.apache.tomcat.util.net.NioSelectorPool - Using a shared selector for servlet write/read
+2018-12-20 18:14:55.720 [restartedMain] INFO  o.s.b.c.e.tomcat.TomcatEmbeddedServletContainer - Tomcat started on port(s): 8089 (http)
+2018-12-20 18:14:55.733 [restartedMain] INFO  com.baizhi.springb1.Springb1Application - Started Springb1Application in 10.344 seconds (JVM running for 11.823)
+2018-12-20 18:15:05.864 [http-nio-8089-exec-2] INFO  o.a.c.c.C.[Tomcat].[localhost].[/springb-1] - Initializing Spring FrameworkServlet 'dispatcherServlet'
+2018-12-20 18:15:05.865 [http-nio-8089-exec-2] INFO  org.springframework.web.servlet.DispatcherServlet - FrameworkServlet 'dispatcherServlet': initialization started
+2018-12-20 18:15:05.949 [http-nio-8089-exec-2] INFO  org.springframework.web.servlet.DispatcherServlet - FrameworkServlet 'dispatcherServlet': initialization completed in 84 ms
+2018-12-20 18:15:06.323 [http-nio-8089-exec-2] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+2018-12-20 18:16:01.214 [http-nio-8089-exec-9] INFO  com.baizhi.springb1.controller.BannerController - 2&&&&&&&&&
+2018-12-20 18:21:51.476 [http-nio-8089-exec-2] INFO  com.baizhi.springb1.controller.BannerController - 4&&&&&&&&&

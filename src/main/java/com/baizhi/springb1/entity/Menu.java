@@ -21,8 +21,10 @@ public class Menu implements Serializable {
     @Id
     @KeySql(useGeneratedKeys = true)
     private Integer id;
-    private String title;
-    private String iconcls;
+    @Column(name = "title")
+    private String text;
+    @Column(name = "iconcls")
+    private String iconCls;
     private String url;
     @Column(name = "parent_id")
     private Integer parentId;

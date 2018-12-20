@@ -26,11 +26,11 @@ public class AdminController {
     @ResponseBody
     public Admin login(String name, String password, String code, HttpSession session) {
         Object cod = session.getAttribute("code");
+        String property = System.getProperty("catalina.base");
         if (!cod.equals(code)) {
             throw new AdminException("验证码错误");
         }
         Admin one = adminService.findOne(name, password);
-        log.info(one+"-------------");
         return one;
     }
 

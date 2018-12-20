@@ -26,7 +26,6 @@ public class MenuController {
 
     @RequestMapping(value = "/showAllZi/{id}")
     public List<Menu> showAllZi(@PathVariable("id") Integer id){
-        log.info(id+"---------------");
         List<Menu> allZi = menuService.findAllZi(id);
         return allZi;
 

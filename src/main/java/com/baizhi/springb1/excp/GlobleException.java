@@ -1,7 +1,6 @@
-package com.baizhi.springb1.conf;
+package com.baizhi.springb1.excp;
 
 
-import com.baizhi.springb1.excp.AdminException;
 import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.ResponseBody;
