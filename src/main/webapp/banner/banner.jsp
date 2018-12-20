@@ -44,6 +44,7 @@
                     //编辑指定行
                     var index = $("#dg").edatagrid("getRowIndex", row);
                     $("#dg").edatagrid("destroyRow", index);
+
                 } else {
                     alert("请先选中行");
                     return ;
@@ -61,6 +62,7 @@
 
         $('#dg').edatagrid({
             method: "GET",
+            autoSave: true,
             updateUrl: "${pageContext.request.contextPath}/banner/update",
             url: '${pageContext.request.contextPath}/banner/showAll',
             //destroyUrl: "${pageContext.request.contextPath}/banner/delete",
@@ -87,6 +89,10 @@
                 console.log(row);
                 $.get("${pageContext.request.contextPath}/banner/delete","id="+row.id,function(){
                     $("#dg").edatagrid("load");
+                });
+                $.messager.show({
+                    title:"系统消息",
+                    msg:"删除成功"
                 });
             },
             detailFormatter: function (rowIndex, rowData) {

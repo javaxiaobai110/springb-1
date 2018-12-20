@@ -26,10 +26,13 @@
                 var code = $("#enCode").val();
                 alert(name + password);
                 $.post("${pageContext.request.contextPath}/admin/login", "name=" + name + "&password=" + password + "&code=" + code, function (result) {
-                    if (result == "账号或密码错误" || result == null) {
+
+                    if (result == "username or password fail") {
                         alert(result);
-                    } else if (result == "验证码错误") {
+                        return;
+                    } else if (result == "checkcode fail") {
                         alert(result);
+                        return;
                     } else {
                         window.location.href = "${pageContext.request.contextPath}/main/main.jsp";
                     }

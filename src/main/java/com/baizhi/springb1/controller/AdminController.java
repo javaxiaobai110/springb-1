@@ -26,11 +26,12 @@ public class AdminController {
     @ResponseBody
     public Admin login(String name, String password, String code, HttpSession session) {
         Object cod = session.getAttribute("code");
-        String property = System.getProperty("catalina.base");
-        if (!cod.equals(code)) {
-            throw new AdminException("验证码错误");
+        String cd = (String)cod;
+        if (!cd.equalsIgnoreCase(code)) {
+            throw new AdminException("checkcode fail");
         }
         Admin one = adminService.findOne(name, password);
+        session.setAttribute("admin",one);
         return one;
     }
 
@@ -43,8 +44,6 @@ public class AdminController {
         session.setAttribute("code", code);
         //在输出图片
         cvc.write(response.getOutputStream());
-
     }
-
 
 }

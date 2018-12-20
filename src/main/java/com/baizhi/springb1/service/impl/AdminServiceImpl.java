@@ -20,7 +20,7 @@ public class AdminServiceImpl implements AdminService {
         admin.setPassword(password);
         Admin admin1 = adminMapper.selectOne(admin);
         if (admin1 == null) {
-            throw new AdminException("账号或密码错误");
+            throw new AdminException("username or password fail");
         }
         return admin1;
     }

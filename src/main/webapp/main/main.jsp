@@ -15,7 +15,7 @@
     <script type="text/javascript">
         $(function () {
            $.get("${pageContext.request.contextPath}/menu/showAllFu",function (result) {
-                console.log(result);
+
                 for(var i = 0; i < result.length; i++){
 
                     if(i == 0) { //显示第一个一级菜单下的二级菜单

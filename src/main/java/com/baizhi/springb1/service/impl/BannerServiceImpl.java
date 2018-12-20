@@ -2,6 +2,7 @@ package com.baizhi.springb1.service.impl;
 
 import com.baizhi.springb1.dao.BannerMapper;
 import com.baizhi.springb1.entity.Banner;
+import com.baizhi.springb1.entity.BannerExample;
 import com.baizhi.springb1.entity.DtoBanner;
 import com.baizhi.springb1.service.BannerService;
 import lombok.extern.slf4j.Slf4j;
@@ -21,8 +22,11 @@ public class BannerServiceImpl implements BannerService {
     @Override
     public DtoBanner findByPage(int page, int rows) {
         DtoBanner dtoBanner = new DtoBanner();
+        BannerExample be = new BannerExample();
+        be.setOrderByClause("id desc");
         RowBounds rb = new RowBounds((page-1)*rows,rows);
-        List<Banner> banners = bannerMapper.selectByRowBounds(new Banner(),rb);
+        //List<Banner> banners = bannerMapper.selectByRowBounds(new Banner(),rb);
+        List<Banner> banners = bannerMapper.selectByExampleAndRowBounds(be,rb);
         int i = bannerMapper.selectCount(new Banner());
         dtoBanner.setRows(banners);
         dtoBanner.setTotal(i);
