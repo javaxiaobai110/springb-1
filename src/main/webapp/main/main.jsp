@@ -1,5 +1,7 @@
 ﻿<%@ page language="java" contentType="text/html; charset=utf-8" pageEncoding="utf-8" %>
+<%@taglib prefix="c" uri="http://java.sun.com/jstl/core_rt" %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
 <html>
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
@@ -37,7 +39,7 @@
 
 
                     $.ajax({
-                        type: 'POST',
+                        type: 'get',
                         async: false,
                         dataType: "json",
                         url: '${pageContext.request.contextPath}/menu/showAllZi/'+result[i].id,
@@ -89,6 +91,10 @@
 
 </head>
 <body class="easyui-layout">
+<%--<c:if test="${sessionScope.admin == null}">
+    <% response.sendRedirect(request.getContextPath()+"/login.jsp");%>
+</c:if>--%>
+
 <div data-options="region:'north',split:true" style="height:60px;background-color:  #5C160C">
     <div style="font-size: 24px;color: #FAF7F7;font-family: 楷体;font-weight: 900;width: 500px;float:left;padding-left: 20px;padding-top: 10px">
         持名法州后台管理系统

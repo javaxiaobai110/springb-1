@@ -1,3 +1,4 @@
+/*
 package com.baizhi.springb1.intcp;
 
 import org.springframework.stereotype.Component;
@@ -13,16 +14,14 @@ public class SessionInterceptor implements HandlerInterceptor {
     public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object o) throws Exception {
         System.out.println("uri="+request.getRequestURI());
         //登录不做拦截
-        if(request.getRequestURI().equals("/admin/login") || request.getRequestURI().equals("/admin/image"))
-        {
+        if(request.getRequestURI().equals("/admin/login") || request.getRequestURI().equals("/admin/image")) {
             return true;
         }
         //验证session是否存在
         Object obj = request.getSession().getAttribute("admin");
-        if(obj == null)
-        {
+        if(obj == null) {
             System.out.println("heheh"+request.getContextPath());
-            response.sendRedirect(request.getContextPath()+"/login.jsp");
+            response.sendRedirect(request.getContextPath()+"/admin/test");
             return false;
         }
         return true;
@@ -38,3 +37,4 @@ public class SessionInterceptor implements HandlerInterceptor {
 
     }
 }
+*/

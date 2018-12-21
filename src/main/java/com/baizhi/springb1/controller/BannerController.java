@@ -1,5 +1,6 @@
 package com.baizhi.springb1.controller;
 
+import com.baizhi.springb1.conf.UploadUtils;
 import com.baizhi.springb1.entity.Banner;
 import com.baizhi.springb1.entity.DtoBanner;
 import com.baizhi.springb1.service.BannerService;
@@ -39,11 +40,9 @@ public class BannerController {
 
     @RequestMapping(value="add",method = RequestMethod.POST)
     public void add(Banner banner, @RequestParam("file")MultipartFile file, HttpServletRequest request) throws IOException {
-        //log.info(banner+"!!!!!!!!!!!!!!!!!!");
-        //log.info(file.getOriginalFilename()+"!!!!!!!!!!!!!!!!!!");
-        File file1 = new File(System.getProperty("user.dir")+"/src/main/webapp/img/"+file.getOriginalFilename());
-        String s = file.getOriginalFilename();
-        banner.setImgPath(s);
+        String fileName = UploadUtils.getFileName(file.getOriginalFilename());
+        File file1 = new File(System.getProperty("user.dir")+"/src/main/webapp/img/"+fileName);
+        banner.setImgPath(fileName);
         bannerService.add(banner);
         file.transferTo(file1);
     }

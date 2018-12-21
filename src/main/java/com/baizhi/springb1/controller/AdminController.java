@@ -13,6 +13,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import java.io.IOException;
+import java.util.Date;
 
 @Controller
 @Slf4j
@@ -21,6 +22,16 @@ public class AdminController {
 
     @Autowired
     private AdminService adminService;
+
+    @RequestMapping("test1")
+    public String test1(Date time){
+        return null;
+    }
+
+    @RequestMapping("test")
+    public String test(){
+        return "redirect:/login.jsp";
+    }
 
     @RequestMapping("login")
     @ResponseBody
@@ -39,6 +50,8 @@ public class AdminController {
     public void image(HttpServletResponse response, HttpSession session) throws IOException {
         // 画一张随机图片 --- 使用工具类的write方法画图片
         CreateValidateCode cvc = new CreateValidateCode();
+        String s = "hehe";
+
         //获取图片上的随机数  --- 存档  --- session
         String code = cvc.getCode();
         session.setAttribute("code", code);
