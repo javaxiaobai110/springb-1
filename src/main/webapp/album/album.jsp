@@ -1,4 +1,4 @@
-<%@page pageEncoding="UTF-8" %>
+<%@page pageEncoding="UTF-8" contentType="text/html; charset=UTF-8" %>
 <script type="text/javascript">
 
         var toolbar = [{
@@ -31,10 +31,16 @@
             handler: function () {
                 var row = $("#album").treegrid("getSelected");
                 if(row == null){
-                    alert("请选择专辑");
+                    $.messager.alert({
+                        title:"友情提示",
+                        msg:"请选择专辑"
+                    });
                     return;
                 }else if(row.duration != null) {
-                    alert("请选择专辑");
+                    $.messager.alert({
+                        title:"友情提示",
+                        msg:"请选择专辑"
+                    });
                     return;
                 }else {
                     addAudio(row);
@@ -52,9 +58,17 @@
                     alert("请选择文件");
                     return;
                 }else {
-                    //提交下载文件的表单
+                    //$.get("${pageContext.request.contextPath}/chapter/download","url="+row.url);
+                    //console.log(row);
+                    window.location.href = "${pageContext.request.contextPath}/chapter/download?filename="+row.url;
                 }
 
+            }
+        },'-', {
+            text: "导出",
+            iconCls: 'icon-redo',
+            handler: function () {
+                window.location.href = "${pageContext.request.contextPath}/album/exportAllAlbum"
             }
         }]
     $(function () {
@@ -82,7 +96,17 @@
             columns:[[
                 {field:'title',title:'名字',width:60},
                 {field:'duration',title:'时长',width:80},
-                {field:'size',title:'大小',width:80}
+                {field:'size',title:'大小',width:80},
+                {field:'url',title:'播放',width:80,
+                        formatter: function(value,row,index){
+                            if(value == null){
+                                return "";
+                            }
+                            return "<audio src='${pageContext.request.contextPath}/audio/"+value+"' controls='controls'></audio>";
+                        }
+
+                }
+
             ]],
             fit:true,
             fitColumns:true,
@@ -123,7 +147,9 @@
 </script>
 
 
-<table id="album"></table>
+<table id="album">
+
+</table>
 <div id="showOne"></div>
 <div id="addOne"></div>
 <div id="addAudio"></div>

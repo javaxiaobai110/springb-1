@@ -29,6 +29,7 @@
         });
 
         $("#chapuplda").datebox({
+            editable:false,
             required:true
         });
         $("#chapalbm").textbox({
@@ -45,11 +46,19 @@
                         // 表单验证 -- 调form的validate方法
                         return $("#forms2").form("validate");
                     },
-                    success:function(){
-                        $("#dg").treegrid("load")
+                    success:function(result){
+                        if(result != null && result != ""){
+                            $("#addAudio").dialog("close");
+                            $.messager.show({
+                                title:"系统提示",
+                                msg:result
+                            });
+                            return ;
+                        }
+                        $("#album").treegrid("reload");
                         $("#addAudio").dialog("close");
                         $.messager.show({
-                            title:"标题",
+                            title:"系统提示",
                             msg:"保存成功"
                         });
                     },
@@ -70,10 +79,8 @@
 </script>
 <form id="forms2" method="post" enctype="multipart/form-data">
     Title: <input id="chaptit" type="text" name="title"/><br/>
-    CoverImg: <input id="chapsize" type="text" name="size"/><br/>
-    Author: <input id="chapdura" type="text" name="duration"/><br/>
     Broadcast: <input id="chapurl" type="file" name="file" required="true"/><br/>
-    Brief: <input id="chapuplda" type="text" name="uploadDate"/><br/>
+    UploadDate: <input id="chapuplda" type="text" name="uploadDate"/><br/>
     Album: <input id="chapalbm" type="text" value=""/>
     <input id="albId" type="hidden" name="albId" value="">
     <a id="chapadd"></a>
