@@ -44,7 +44,6 @@
                         dataType: "json",
                         url: '${pageContext.request.contextPath}/menu/showAllZi/'+result[i].id,
                         success: function(data) {
-                            console.log(data);
                             $("#tree" + result[i].id).tree({
                                 data: data,
                                 animate: true,

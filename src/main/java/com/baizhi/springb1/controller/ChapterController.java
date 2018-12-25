@@ -114,23 +114,7 @@ public class ChapterController {
         }
         in.close();*/
 
-    /*public String processFileName(HttpServletRequest request, String fileNames){
-        String codedFilename = null;
-        try{
-            String agent = request.getHeader("USER-AGENT");
-            if(null != agent && -1 != agent.indexOf("MSIE") || null != agent && -1 !=agent.indexOf("Trident")){  //IE
-                String name = java.net.URLEncoder.encode(fileNames, "UTF-8");
 
-                codedFilename = name;
-            }else if(null != agent && -1 != agent.indexOf("Mozilla")){  //火狐，Chrome等
-                codedFilename = new String(fileNames.getBytes("UTF-8"), "iso-8859-1");
-            }
-        }catch (Exception e) {
-            e.printStackTrace();
-        }
-
-        return codedFilename;
-    }*/
 
 
 
