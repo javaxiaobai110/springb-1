@@ -41,7 +41,7 @@
             handler: function () {
                 var row = $("#dg").edatagrid("getSelected");
                 if (row != null) {
-                    //编辑指定行
+
                     var index = $("#dg").edatagrid("getRowIndex", row);
                     $("#dg").edatagrid("destroyRow", index);
 
@@ -56,7 +56,7 @@
             text: "保存",
             iconCls: 'icon-save',
             handler: function () {
-                $("#dg").edatagrid("saveRow")
+                $("#dg").edatagrid("saveRow");
             }
         }]
 
@@ -85,8 +85,6 @@
             toolbar: toolbar,
             view: detailview,
             onDestroy:function(index,row){
-                console.log(index);
-                console.log(row);
                 $.get("${pageContext.request.contextPath}/banner/delete","id="+row.id,function(){
                     $("#dg").edatagrid("load");
                 });

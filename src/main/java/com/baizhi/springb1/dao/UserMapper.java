@@ -11,4 +11,6 @@ public interface UserMapper extends Mapper<User> {
     public List<Province> queryByGroup();
 
     public Integer findByRegDate(Integer dateNum);
+
+    public void insertBatch(List<User> users);
 }

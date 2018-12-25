@@ -7,8 +7,15 @@
     </select>
 
     <select id="findByRegDate" resultType="int">
-        
+
         select count(*) from user where datediff(now(),reg_time) &lt; #{dateNum}
     </select>
+
+    <insert id="insertBatch" parameterType="java.util.List">
+        insert into user(phone,password,salt,dharma,sign,sex,name,head_pic,province,city,status,reg_time) values
+        <foreach collection="list" index="index" item="item" separator=",">
+            (#{item.phone},#{item.password},#{item.salt},#{item.dharma},#{item.sign},#{item.sex},#{item.name},#{item.headPic},#{item.province},#{item.city},#{item.status},#{item.regTime})
+        </foreach>
+    </insert>
 
 </mapper>

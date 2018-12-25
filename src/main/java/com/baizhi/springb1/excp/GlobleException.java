@@ -39,4 +39,9 @@ public class GlobleException {
     public String check5(AlbumException e) {
         return e.getMessage();
     }
+
+    @ExceptionHandler(UserException.class)
+    public String check6(UserException e){
+        return e.getMessage();
+    }
 }

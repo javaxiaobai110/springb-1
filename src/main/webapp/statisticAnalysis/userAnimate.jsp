@@ -22,7 +22,9 @@
         },
         tooltip: {},
         legend: {
-            data:['用户数量']
+            orient: 'vertical',
+            left: 'right',
+            data:['活跃用户']
         },
         xAxis: {
             data: []
