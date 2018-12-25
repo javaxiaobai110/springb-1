@@ -6,12 +6,14 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" pageEncoding="UTF-8" language="java" %>
+
 <script type="text/javascript" src="${pageContext.request.contextPath }/js/echarts.min.js"></script>
+<script type="text/javascript" src="${pageContext.request.contextPath }/js/china.js"></script>
 <!-- 为ECharts准备一个具备大小（宽高）的Dom -->
 <div id="heh" style="width: 600px;height: 400px;;margin-top: 30px;margin-left: 30px"></div>
 
 <script type="text/javascript">
-    var myChart = echarts.init(document.getElementById('statistics_main'));
+    var myChart = echarts.init(document.getElementById('heh'));
     option = {
         title : {
             text: 'iphone销量',
@@ -155,4 +157,5 @@
             }
         ]
     };
+    myChart.setOption(option);
 </script>
