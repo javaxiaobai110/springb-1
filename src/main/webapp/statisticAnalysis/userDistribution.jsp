@@ -92,13 +92,13 @@
     myChart.setOption(option);
 
     $(function () {
-        $.post("/cmfzms_gaozhy/statistics/distribution1", function (data) {
+        $.post("${pageContext.request.contextPath}/user/findUserByGroup", function (data) {
             console.log(data);
             myChart.setOption({
                 series: [{
                     // 根据名字对应到相应的系列
-                    //name: '男',
-                    data: data
+                    name: '用户数量',
+                    data: data.data
                 }]
             });
         }, "json");

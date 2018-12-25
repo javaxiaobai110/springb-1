@@ -12,5 +12,5 @@ import java.io.Serializable;
 @Entity
 public class Province implements Serializable {
     private String name;
-    private Integer count;
+    private Integer value;
 }
