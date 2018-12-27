@@ -5,13 +5,19 @@ import com.baizhi.springb1.entity.Province;
 import com.baizhi.springb1.service.UserService;
 import com.github.pagehelper.PageHelper;
 import com.github.pagehelper.PageInfo;
+import com.github.tobato.fastdfs.domain.fdfs.StorePath;
+import com.github.tobato.fastdfs.service.FastFileStorageClient;
 import lombok.extern.slf4j.Slf4j;
+import org.apache.commons.io.FilenameUtils;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
 
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
 import java.util.List;
 
 @RunWith(SpringRunner.class)
@@ -24,6 +30,12 @@ public class Springb1ApplicationTests {
 
     @Autowired
     private UserService userService;
+
+   /* @Autowired
+    private GenerateStorageClient generateStorageClient;*/
+
+    @Autowired
+    private FastFileStorageClient fastFileStorageClient;
 
     @Test
     public void contextLoads() {
@@ -38,6 +50,18 @@ public class Springb1ApplicationTests {
         List<Object> list = pageInfo.getList();
         list.forEach(s-> System.out.println(s));
         log.info("hehe"+"------------------------"+pageInfo.toString());
+    }
+
+    @Test
+    public void test() throws FileNotFoundException {
+        //FileInfo group1 = fastFileStorageClient.queryFileInfo("group1", "M00/00/00/wKg0i1wjotiAGMTmAAIwwPFU2Bk266.png");
+        //group1.getCrc32();
+        File file = new File("F:/呵呵.jpg");
+        StorePath storePath = fastFileStorageClient.uploadFile(new FileInputStream(file), file.length(), FilenameUtils.getExtension(file.getName()), null);
+        System.out.println(storePath);
+
+
+
     }
 
 }

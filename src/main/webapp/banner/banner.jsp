@@ -2,7 +2,7 @@
 <script type="text/javascript">
     $(function () {
         $("#addBannerDialog").dialog({
-            title:'添加用户',
+            title:'添加轮播图',
             iconCls:"icon-man",
             cache:false,
             resizable:true,
@@ -95,7 +95,7 @@
             },
             detailFormatter: function (rowIndex, rowData) {
                 return '<table><tr>' +
-                    '<td rowspan=2 style="border:0"><img src="${pageContext.request.contextPath}/img/' + rowData.imgPath + '" style="height:50px;"></td>' +
+                    '<td rowspan=2 style="border:0"><img src="'+rowData.imgPath+'" style="height:50px;"></td>' +
                     '<td style="border:0">' +
                     '<p>描述: ' + rowData.description + '</p>' +
                     '<p>日期: ' + rowData.pubDate + '</p>' +
