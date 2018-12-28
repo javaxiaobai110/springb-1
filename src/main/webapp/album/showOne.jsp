@@ -12,7 +12,7 @@
 
             console.log(result.id);
             $("#sp0").html(result.title);
-            $("#img1").prop("src","${pageContext.request.contextPath}/img/"+result.coverImg);
+            $("#img1").prop("src",result.coverImg);
             $("#sp1").text(result.author);
             $("#sp2").text(result.broadcast);
             $("#sp3").text(result.count);

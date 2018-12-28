@@ -27,6 +27,8 @@ public class ChapterServiceImpl implements ChapterService {
         try{
             chapterMapper.insertSelective(chapter);//使用数据库默认值
             Album album = albumMapper.selectByPrimaryKey(chapter.getAlbId());
+            if(album.getCount()==null)
+                album.setCount(0);
             album.setCount(album.getCount()+1);
             albumMapper.updateByPrimaryKey(album);
         }catch (Exception e){

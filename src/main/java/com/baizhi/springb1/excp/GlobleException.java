@@ -44,4 +44,9 @@ public class GlobleException {
     public String check6(UserException e){
         return e.getMessage();
     }
+
+    @ExceptionHandler(BannerException.class)
+    public String check7(BannerException e){
+        return e.getMessage();
+    }
 }

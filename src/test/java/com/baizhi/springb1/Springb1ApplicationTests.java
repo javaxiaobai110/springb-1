@@ -7,6 +7,7 @@ import com.github.pagehelper.PageHelper;
 import com.github.pagehelper.PageInfo;
 import com.github.tobato.fastdfs.domain.fdfs.StorePath;
 import com.github.tobato.fastdfs.service.FastFileStorageClient;
+import io.goeasy.GoEasy;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.io.FilenameUtils;
 import org.junit.Test;
@@ -56,11 +57,15 @@ public class Springb1ApplicationTests {
     public void test() throws FileNotFoundException {
         //FileInfo group1 = fastFileStorageClient.queryFileInfo("group1", "M00/00/00/wKg0i1wjotiAGMTmAAIwwPFU2Bk266.png");
         //group1.getCrc32();
-        File file = new File("F:/呵呵.jpg");
+        File file = new File("F:/捕获.png");
         StorePath storePath = fastFileStorageClient.uploadFile(new FileInputStream(file), file.length(), FilenameUtils.getExtension(file.getName()), null);
         System.out.println(storePath);
+    }
 
-
+    @Test
+    public void test3(){
+        GoEasy goEasy = new GoEasy("http://rest-hangzhou.goeasy.io", "BC-3a52d5e52fdb42908a3f0c20915ca309");
+        goEasy.publish("FirstgoEasy", "呵呵HelloWorld, GOEASY");
 
     }
 

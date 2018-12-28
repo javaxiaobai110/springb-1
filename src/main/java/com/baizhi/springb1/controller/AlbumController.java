@@ -1,12 +1,15 @@
 package com.baizhi.springb1.controller;
 
 import com.baizhi.springb1.conf.FileUtil;
-import com.baizhi.springb1.conf.UploadUtils;
 import com.baizhi.springb1.entity.Album;
 import com.baizhi.springb1.entity.DtoAlbum;
+import com.baizhi.springb1.excp.AlbumUploadException;
 import com.baizhi.springb1.excp.ExportException;
 import com.baizhi.springb1.service.AlbumService;
+import com.github.tobato.fastdfs.domain.fdfs.StorePath;
+import com.github.tobato.fastdfs.service.FastFileStorageClient;
 import lombok.extern.slf4j.Slf4j;
+import org.apache.commons.io.FilenameUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.env.Environment;
 import org.springframework.stereotype.Controller;
@@ -34,6 +37,8 @@ public class AlbumController {
     @Autowired
     private Environment env;
 
+    @Autowired
+    private FastFileStorageClient fastFileStorageClient;
 
 
     @RequestMapping("exportAllAlbum")
@@ -84,13 +89,21 @@ public class AlbumController {
 
     @RequestMapping(value="add",method = RequestMethod.POST)
     @ResponseBody
-    public void add(Album album, @RequestParam("file") MultipartFile file) throws IOException {
-        log.info(album+"============"+file.getOriginalFilename());
-        String fileName = UploadUtils.getFileName(file.getOriginalFilename());
+    public String add(Album album, @RequestParam("file") MultipartFile file) throws IOException {
+
+        /*String fileName = UploadUtils.getFileName(file.getOriginalFilename());
         File file1 = new File(System.getProperty("user.dir")+"/src/main/webapp/img/"+fileName);
         album.setCoverImg(fileName);
         albumService.add(album);
-        file.transferTo(file1);
+        file.transferTo(file1);*/
+        log.info(file.getOriginalFilename().toLowerCase()+"小写==============");
+        System.out.println(file.getOriginalFilename().toLowerCase().endsWith("png")+"========================================");
+        if(!file.getOriginalFilename().toLowerCase().endsWith("png") && !file.getOriginalFilename().toLowerCase().endsWith("jpg") && !file.getOriginalFilename().toLowerCase().endsWith("bmp") && !file.getOriginalFilename().toLowerCase().endsWith("gif"))
+            throw new AlbumUploadException("图片类型格式错误");
+        StorePath storePath = fastFileStorageClient.uploadFile(file.getInputStream(), file.getInputStream().available(), FilenameUtils.getExtension(file.getOriginalFilename()), null);
+        album.setCoverImg(env.getProperty("fdfs.web-server-url")+"/"+storePath.getFullPath());
+        albumService.add(album);
+        return "添加专辑成功";
     }
 
     /*public String processFileName(HttpServletRequest request, String fileNames){

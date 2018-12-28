@@ -71,7 +71,7 @@
                         if(value == null){
                             return "";
                         }
-                        return "<img src='${pageContext.request.contextPath}/img/"+value+"'>";
+                        return "<img src='"+value+"' width='25px' height='25px'>";
                     }
                 },
                 {field:'province',title:'省',width:5},

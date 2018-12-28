@@ -102,7 +102,7 @@
                             if(value == null){
                                 return "";
                             }
-                            return "<audio src='${pageContext.request.contextPath}/audio/"+value+"' controls='controls'></audio>";
+                            return "<audio src='"+value+"' controls='controls'></audio>";
                         }
 
                 }

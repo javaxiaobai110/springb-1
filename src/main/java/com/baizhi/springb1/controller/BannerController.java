@@ -2,6 +2,7 @@ package com.baizhi.springb1.controller;
 
 import com.baizhi.springb1.entity.Banner;
 import com.baizhi.springb1.entity.DtoBanner;
+import com.baizhi.springb1.excp.BannerUploadException;
 import com.baizhi.springb1.service.BannerService;
 import com.github.tobato.fastdfs.domain.fdfs.StorePath;
 import com.github.tobato.fastdfs.service.FastFileStorageClient;
@@ -47,36 +48,13 @@ public class BannerController {
     }
 
     @RequestMapping(value="add",method = RequestMethod.POST)
-    public void add(Banner banner, @RequestParam("file")MultipartFile file, HttpServletRequest request) throws IOException {
-        log.info(file.getOriginalFilename()+"文件名============");
-        log.info(FilenameUtils.getExtension(file.getOriginalFilename())+"文件名扩展名============");
+    public String add(Banner banner, @RequestParam("file")MultipartFile file, HttpServletRequest request) throws IOException {
+        if(!file.getOriginalFilename().toLowerCase().endsWith("png") && !file.getOriginalFilename().toLowerCase().endsWith("jpg") && !file.getOriginalFilename().toLowerCase().endsWith("bmp") && !file.getOriginalFilename().toLowerCase().endsWith("gif"))
+            throw new BannerUploadException("图片类型格式错误");
         StorePath storePath = fastFileStorageClient.uploadFile(file.getInputStream(), file.getInputStream().available(), FilenameUtils.getExtension(file.getOriginalFilename()), null);
-        String fullPath = storePath.getFullPath();
-        //String group = storePath.getGroup();
-        //String path = storePath.getPath();
-        banner.setImgPath(env.getProperty("fdfs.web-server-url")+"/"+fullPath);
+        banner.setImgPath(env.getProperty("fdfs.web-server-url")+"/"+storePath.getFullPath());
         bannerService.add(banner);
-        //log.info(fullPath+"=============");
-        //log.info(group+"=============");
-        //log.info(path+"=============");
-        //log.info(storePath.toString());
-        //FileInfo fileInfo = fastFileStorageClient.queryFileInfo(group, path);
-        //log.info(fileInfo.toString()+"==============++");
-        //String sourceIpAddr = fileInfo.getSourceIpAddr();//没有端口
-        //log.info(sourceIpAddr+"============-----");
-
-        //fastFileStorageClient.queryFileInfo()
-        //String fileName = UploadUtils.getFileName(file.getOriginalFilename());
-        //String originalFilename = file.getOriginalFilename();
-        //File file1 = new File(originalFilename);
-        //File file1 = new File(System.getProperty("user.dir")+"/src/main/webapp/img/"+fileName);
-        //banner.setImgPath(fileName);
-        //ServletInputStream inputStream = request.getInputStream();
-        //fastFileStorageClient.uploadFile(inputStream);
-        //File file = new File("F:/呵呵.jpg");
-        //StorePath storePath = fastFileStorageClient.uploadFile(, file.length(), FilenameUtils.getExtension(file.getName()), null);
-        //bannerService.add(banner);
-        //file.transferTo(file1);
+        return "添加成功";
     }
 
     @RequestMapping("/delete")

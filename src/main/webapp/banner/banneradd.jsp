@@ -29,12 +29,12 @@
                        // 表单验证 -- 调form的validate方法
                        return $("#addUserForm").form("validate");
                    },
-                   success:function(){
+                   success:function(result){
                        $("#dg").edatagrid("load")
                        $("#addBannerDialog").dialog("close");
                        $.messager.show({
-                           title:"标题",
-                           msg:"保存成功"
+                           title:"系统提示",
+                           msg:result
                        });
                    },
                    /*queryParams:{"aaa":"xxx","bbb":"ccc"}*/

@@ -13,7 +13,7 @@
     var result =  queryParams["row"];
     $(function () {
 
-
+        alert(result.id);
         $("#albId").val(result.id);
         $("#chapalbm").val(result.title);
 
@@ -54,13 +54,15 @@
                                 msg:result
                             });
                             return ;
+                        }else {
+                            $("#album").treegrid("reload");
+                            $("#addAudio").dialog("close");
+                            $.messager.show({
+                                title:"系统提示",
+                                msg:result
+                            });
                         }
-                        $("#album").treegrid("reload");
-                        $("#addAudio").dialog("close");
-                        $.messager.show({
-                            title:"系统提示",
-                            msg:"保存成功"
-                        });
+
                     },
                     /*queryParams:{"aaa":"xxx","bbb":"ccc"}*/
                 });

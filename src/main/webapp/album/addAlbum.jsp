@@ -35,12 +35,12 @@
                         // 表单验证 -- 调form的validate方法
                         return $("#forms1").form("validate");
                     },
-                    success:function(){
-                        $("#dg").treegrid("reload")
+                    success:function(result){
+                        $("#album").treegrid("reload")
                         $("#addOne").dialog("close");
                         $.messager.show({
-                            title:"标题",
-                            msg:"保存成功"
+                            title:"系统提示",
+                            msg:result
                         });
                     },
                     /*queryParams:{"aaa":"xxx","bbb":"ccc"}*/

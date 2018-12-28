@@ -4,6 +4,7 @@ import com.baizhi.springb1.dao.BannerMapper;
 import com.baizhi.springb1.entity.Banner;
 import com.baizhi.springb1.entity.BannerExample;
 import com.baizhi.springb1.entity.DtoBanner;
+import com.baizhi.springb1.excp.BannerAddException;
 import com.baizhi.springb1.service.BannerService;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.ibatis.session.RowBounds;
@@ -49,7 +50,13 @@ public class BannerServiceImpl implements BannerService {
 
     @Override
     public void add(Banner banner) {
-        bannerMapper.insertSelective(banner);
+
+        try {
+            bannerMapper.insertSelective(banner);
+        } catch (Exception e) {
+            e.printStackTrace();
+            throw new BannerAddException("bann添加失败");
+        }
     }
 
     @Override
