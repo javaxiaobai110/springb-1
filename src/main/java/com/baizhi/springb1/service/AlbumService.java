@@ -14,4 +14,10 @@ public interface AlbumService {
     public List<Album> exportAll();
 
     public void update(Album album);
+
+    public List<Album> findByFirstPage();
+
+    public List<Album> findAll();
+
+    public Album findOneAlbum(Integer id,Integer uid);
 }

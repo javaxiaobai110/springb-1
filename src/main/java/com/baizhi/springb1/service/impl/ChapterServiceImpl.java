@@ -6,10 +6,13 @@ import com.baizhi.springb1.entity.Album;
 import com.baizhi.springb1.entity.Chapter;
 import com.baizhi.springb1.excp.AddChapterException;
 import com.baizhi.springb1.service.ChapterService;
+import com.github.pagehelper.PageHelper;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
+
+import java.util.List;
 
 @Service
 @Transactional
@@ -34,5 +37,17 @@ public class ChapterServiceImpl implements ChapterService {
         }catch (Exception e){
             throw new AddChapterException("章节添加失败");
         }
+    }
+
+    @Override
+    public List<Chapter> findByFirstPage() {
+        PageHelper.startPage(1, 2).setOrderBy("upload_date desc");
+        List<Chapter> chapters = chapterMapper.selectAll();
+        return chapters;
+    }
+
+    @Override
+    public List<Chapter> findAll() {
+        return chapterMapper.selectAll();
     }
 }

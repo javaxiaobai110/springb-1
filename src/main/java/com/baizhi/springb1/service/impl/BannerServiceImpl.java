@@ -63,4 +63,14 @@ public class BannerServiceImpl implements BannerService {
     public void delete(Integer id) {
         bannerMapper.deleteByPrimaryKey(id);
     }
+
+    @Override
+    public List<Banner> findByFirstPage() {
+        BannerExample be = new BannerExample();
+        be.createCriteria().andStatusEqualTo(1);
+        List<Banner> banners = bannerMapper.selectByExample(be);
+        return banners;
+    }
+
+
 }

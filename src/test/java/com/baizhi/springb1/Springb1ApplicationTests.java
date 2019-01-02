@@ -60,6 +60,7 @@ public class Springb1ApplicationTests {
         File file = new File("F:/捕获.png");
         StorePath storePath = fastFileStorageClient.uploadFile(new FileInputStream(file), file.length(), FilenameUtils.getExtension(file.getName()), null);
         System.out.println(storePath);
+        //fastFileStorageClient.downloadFile("","",new);
     }
 
     @Test

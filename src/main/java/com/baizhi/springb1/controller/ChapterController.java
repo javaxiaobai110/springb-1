@@ -5,12 +5,12 @@ import com.baizhi.springb1.entity.Chapter;
 import com.baizhi.springb1.excp.AddChapterException;
 import com.baizhi.springb1.service.ChapterService;
 import com.github.tobato.fastdfs.domain.fdfs.StorePath;
+import com.github.tobato.fastdfs.domain.proto.storage.DownloadByteArray;
 import com.github.tobato.fastdfs.service.FastFileStorageClient;
 import it.sauronsoftware.jave.Encoder;
 import it.sauronsoftware.jave.EncoderException;
 import it.sauronsoftware.jave.MultimediaInfo;
 import lombok.extern.slf4j.Slf4j;
-import org.apache.commons.io.FileUtils;
 import org.apache.commons.io.FilenameUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.env.Environment;
@@ -21,9 +21,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.multipart.MultipartFile;
 
 import javax.servlet.ServletOutputStream;
-import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import javax.servlet.http.HttpSession;
 import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
@@ -128,8 +126,8 @@ public class ChapterController {
     }
 
     @RequestMapping("/download")
-    public void download(String filename, HttpServletResponse response, HttpSession session, HttpServletRequest request) throws IOException {
-        String path = session.getServletContext().getRealPath("/audio");
+    public void download(String filename,String title, HttpServletResponse response) throws IOException {
+        /*String path = session.getServletContext().getRealPath("/audio");
         String fileUrl = path+File.separatorChar+filename;
         File file = new File(fileUrl);
         filename = URLEncoder.encode(filename, "UTF-8");
@@ -138,6 +136,27 @@ public class ChapterController {
         ServletOutputStream outputStream1 = response.getOutputStream();
         outputStream1.write(bytes);
         outputStream1.close();
+        fastFileStorageClient.downloadFile()*/
+        //int i1 = ;
+        //log.info(+"-=-=-=-=");
+        title = URLEncoder.encode(title, "UTF-8");
+        response.setHeader("content-disposition", "attachment;filename=" + title+filename.substring(filename.lastIndexOf(".")));
+        log.info(title+"===================");
+
+        String[] split = filename.split("/");
+        for (int i = 0; i < split.length; i++) {
+            if (split[i].contains("group")){
+                log.info(filename.substring(filename.indexOf(split[i])+split[i].length()+1)+"-=-=-=-=-");
+                byte[] bytes = fastFileStorageClient.downloadFile(split[i], filename.substring(filename.indexOf(split[i]) + split[i].length() + 1), new DownloadByteArray());
+                ServletOutputStream outputStream = response.getOutputStream();
+                outputStream.write(bytes);
+                outputStream.close();
+                break;
+            }
+            //fastFileStorageClient.downloadFile(split[i],filename.substring(filename.indexOf(split[i])+split[i].length()+1),new DownloadByteArray());
+        }
+        return ;
+
     }
 
 

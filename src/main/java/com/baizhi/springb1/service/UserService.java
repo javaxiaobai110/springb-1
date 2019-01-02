@@ -21,4 +21,10 @@ public interface UserService {
 
     public void importUsers(MultipartFile file);
 
+    public User findUserOne(String phone, String password);
+
+    public User addUser(String phone,String password);
+
+    public User modifyUser(User user);
+
 }

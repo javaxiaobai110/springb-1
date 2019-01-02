@@ -44,8 +44,8 @@ public class UserController {
     public void exportAllUser(HttpServletResponse response){
         List<User> users = userService.exportAll();
         for (User user : users) {
-            String realPath = env.getProperty("file.real.path");
-            user.setHeadPic(realPath+File.separatorChar+user.getHeadPic());
+            String realPath = env.getProperty("fdfs.web-server-url");
+            user.setHeadPic(realPath+ File.separatorChar+user.getHeadPic());
         }
         try {
             String encode = URLEncoder.encode("哈哈.xls", "UTF-8");

@@ -6,8 +6,10 @@ import com.baizhi.springb1.entity.Album;
 import com.baizhi.springb1.entity.Chapter;
 import com.baizhi.springb1.entity.ChapterExample;
 import com.baizhi.springb1.entity.DtoAlbum;
+import com.baizhi.springb1.excp.AlbumException;
 import com.baizhi.springb1.excp.AlbumUpdateFailException;
 import com.baizhi.springb1.service.AlbumService;
+import com.github.pagehelper.PageHelper;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.ibatis.session.RowBounds;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -74,6 +76,28 @@ public class AlbumServiceImpl implements AlbumService {
             throw new AlbumUpdateFailException("更新失败");
         }
 
+    }
+
+    @Override
+    public List<Album> findByFirstPage() {
+        PageHelper.startPage(1, 5).setOrderBy("pub_date desc");
+        List<Album> albums = albumMapper.selectAll();
+        return albums;
+    }
+
+    @Override
+    public List<Album> findAll() {
+        return albumMapper.selectAll();
+    }
+
+    @Override
+    public Album findOneAlbum(Integer id, Integer uid) {
+        if (id == null || uid == null){
+            throw new AlbumException("专辑查询详情出错了");
+        }else{
+            Album album = albumMapper.selectByPrimaryKey(id);
+            return album;
+        }
     }
 
 

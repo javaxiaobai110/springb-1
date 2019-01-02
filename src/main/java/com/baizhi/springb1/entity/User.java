@@ -37,7 +37,7 @@ public class User implements Serializable {
     private String password;
     @Excel(name = "盐")
     private String salt;
-    @Excel(name = "上师")
+    @Excel(name = "法名")
     private String dharma;
     @Excel(name = "签名")
     private String sign;
@@ -59,4 +59,6 @@ public class User implements Serializable {
     @JsonFormat(pattern = "yyyy-MM-dd")
     @Excel(name = "注册时间",format = "YYYY年MM月dd日",width = 20)
     private Date regTime;
+    @Excel(name = "上师")
+    private Integer guruId;
 }

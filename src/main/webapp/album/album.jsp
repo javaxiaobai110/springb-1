@@ -60,7 +60,7 @@
                 }else {
                     //$.get("${pageContext.request.contextPath}/chapter/download","url="+row.url);
                     //console.log(row);
-                    window.location.href = "${pageContext.request.contextPath}/chapter/download?filename="+row.url;
+                    window.location.href = "${pageContext.request.contextPath}/chapter/download?filename="+row.url+"&title="+row.title;
                 }
 
             }
