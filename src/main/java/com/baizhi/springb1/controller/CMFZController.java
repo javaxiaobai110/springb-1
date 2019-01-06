@@ -118,7 +118,7 @@ public class CMFZController {
     @RequestMapping("/identify/obtain")
     public void obtain(String phone) throws Exception{
         Random random = new Random();
-        String cod = null;
+        String cod = "";
         for (int i = 0; i < 4; i++) {
              cod+=random.nextInt(9);
         }

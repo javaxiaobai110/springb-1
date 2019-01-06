@@ -1,6 +1,6 @@
 package com.baizhi.springb1;
 
-import com.baizhi.springb1.conf.FileUtil;
+import com.baizhi.springb1.util.FileUtil;
 import com.baizhi.springb1.entity.User;
 
 import java.io.IOException;

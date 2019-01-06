@@ -6,4 +6,6 @@ import com.baizhi.springb1.entity.Admin;
 public interface AdminService {
 
     public Admin findOne(String username, String password);
+
+    public Admin findOneByName(String name);
 }

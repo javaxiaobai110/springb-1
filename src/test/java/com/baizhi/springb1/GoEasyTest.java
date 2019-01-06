@@ -2,8 +2,16 @@ package com.baizhi.springb1;
 
 import com.aliyuncs.exceptions.ClientException;
 
+import java.util.Random;
+
 public class GoEasyTest {
     public static void main(String[] args) throws ClientException {
+        Random random = new Random();
+        String cod = "";
+        for (int i = 0; i < 4; i++) {
+            cod = cod + random.nextInt(9);
+        }
+        System.out.println(cod);
         /*System.setProperty("sun.net.client.defaultConnectTimeout", "10000");
         System.setProperty("sun.net.client.defaultReadTimeout", "10000");
         //初始化ascClient需要的几个参数

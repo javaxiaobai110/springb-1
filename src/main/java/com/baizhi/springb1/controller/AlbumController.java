@@ -1,6 +1,6 @@
 package com.baizhi.springb1.controller;
 
-import com.baizhi.springb1.conf.FileUtil;
+import com.baizhi.springb1.util.FileUtil;
 import com.baizhi.springb1.entity.Album;
 import com.baizhi.springb1.entity.DtoAlbum;
 import com.baizhi.springb1.excp.AlbumUploadException;

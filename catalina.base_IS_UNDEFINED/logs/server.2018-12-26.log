@@ -451,7 +451,7 @@ Caused by: java.lang.IllegalArgumentException: the value of item "tracker_server
 2018-12-26 22:08:29.170 [http-nio-8089-exec-9] ERROR o.a.c.c.C.[.[.[/springb-1].[dispatcherServlet] - Servlet.service() for servlet [dispatcherServlet] in context with path [/springb-1] threw exception [Request processing failed; nested exception is java.lang.StringIndexOutOfBoundsException: String index out of range: -1] with root cause
 java.lang.StringIndexOutOfBoundsException: String index out of range: -1
 	at java.lang.String.substring(String.java:1967)
-	at com.baizhi.springb1.conf.UploadUtils.getFileName(UploadUtils.java:12)
+	at com.baizhi.springb1.util.UploadUtils.getFileName(UploadUtils.java:12)
 	at com.baizhi.springb1.controller.BannerController.add(BannerController.java:47)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
@@ -507,4 +507,4 @@ java.lang.StringIndexOutOfBoundsException: String index out of range: -1
 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
 	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
 	at java.lang.Thread.run(Thread.java:748)
-2018-12-26 22:08:52.043 [http-nio-8089-exec-1] INFO  com.baizhi.springb1.controller.BannerController - D:\ideaworkspace\springb\springb-1\ºÇºÇ.jpg
+2018-12-26 22:08:52.043 [http-nio-8089-exec-1] INFO  com.baizhi.springb1.controller.BannerController - D:\ideaworkspace\springb\springb-1\ï¿½Çºï¿½.jpg

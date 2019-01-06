@@ -24,4 +24,12 @@ public class AdminServiceImpl implements AdminService {
         }
         return admin1;
     }
+
+    @Override
+    public Admin findOneByName(String name) {
+        Admin admin = new Admin();
+        admin.setName(name);
+        Admin admin1 = adminMapper.selectOne(admin);
+        return admin1;
+    }
 }

@@ -1,6 +1,6 @@
 package com.baizhi.springb1.controller;
 
-import com.baizhi.springb1.conf.UploadUtils;
+import com.baizhi.springb1.util.UploadUtils;
 import com.baizhi.springb1.entity.Chapter;
 import com.baizhi.springb1.excp.AddChapterException;
 import com.baizhi.springb1.service.ChapterService;

@@ -1,4 +1,4 @@
-package com.baizhi.springb1.conf;
+package com.baizhi.springb1.util;
 
 import java.util.UUID;
 import java.util.regex.Matcher;

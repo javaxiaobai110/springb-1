@@ -69,4 +69,9 @@ public class GlobleException {
         map.put("500",e.getMessage());
         return map;
     }
+
+    /*@ExceptionHandler(AuthenticationException.class)
+    public String check9(AuthenticationException e){
+        return e.getMessage();
+    }*/
 }
